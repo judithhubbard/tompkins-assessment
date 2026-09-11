@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Tompkins Assessment Audit</title>
+<style>
+:root{color-scheme:light;--bg:#fff;--ink:#000;--ink2:#444;--mute:#777;--rule:#ccc;--grid:#e6e6e6;--bar:#111;--bar2:#aaa;--band:#f0f0f0;--accent:#c0392b;--c-sf:#1f5fa8;--c-apt:#2a9d5c;--c-com:#c0392b}
+body{margin:0;background:#fff;color:#000;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;padding-inline:clamp(16px,4vw,40px);padding-block:32px 80px}
+.wrap{max-width:820px;margin:0 auto}
+h1{font-size:22px;font-weight:700;margin:0 0 4px}
+h2{font-size:16px;font-weight:700;margin:36px 0 6px;padding-top:14px;border-top:1px solid var(--rule);clear:both}
+h3{font-size:14px;font-weight:700;margin:18px 0 4px}
+p{margin:0 0 10px;max-width:70ch}
+.meta{color:var(--mute);font-size:13px;margin-bottom:20px}
+.side{float:right;width:230px;margin:4px 0 12px 28px;padding:10px 12px;border-left:2px solid var(--ink);background:var(--band);font-size:13px;line-height:1.45}
+.side b{display:block;margin-bottom:4px}
+.side p{margin:0 0 6px}
+.side p:last-child{margin:0}
+.side table.mini{width:100%;font-size:12.5px;margin:6px 0 8px;border-collapse:collapse}
+.side table.mini td{padding:2px 4px;border-bottom:1px solid var(--grid)}
+.side table.mini tr:first-child td{color:var(--mute);border-bottom:1px solid var(--ink)}
+@media (max-width:700px){.side{float:none;width:auto;margin:0 0 14px}}
+table.pair{width:auto;min-width:380px}
+table.pair td,table.pair th{padding:4px 14px 4px 0}
+.trio{clear:both;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 4px}
+.trio table{font-size:13px}
+.trio th{border-bottom:2px solid var(--ink)}
+.trio caption{text-align:left;font-weight:600;font-size:13px;padding:0 0 4px}
+@media (max-width:600px){.trio{grid-template-columns:1fr}}
+.vs{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:12px 0 14px;max-width:none;font-size:14px}
+.vs h4{font-size:13px;font-weight:600;margin:0 0 6px;padding-bottom:4px;border-bottom:1px solid var(--ink)}
+.vs p{margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--grid);max-width:none}
+.vs .res{grid-column:1/-1;border:0;padding:4px 0 0;font-weight:600}
+@media (max-width:600px){.vs{grid-template-columns:1fr}.vs h4{display:none}.vs p::before{font-weight:600;display:block}.vs .c::before{content:'The county says:'}.vs .a::before{content:'The answer:'}.vs .res::before{content:none}}
+ol.sum{padding-left:20px;margin:8px 0 0;max-width:72ch}
+ol.sum li{margin-bottom:5px}
+body{counter-reset:sec}
+h2{counter-increment:sec;counter-reset:fig tbl}
+.wrap>.tw{background:#f8f8f6;border:1px solid var(--grid);padding:12px 16px 10px;margin:22px 0;counter-increment:tbl}
+.tt{font-size:13px;font-weight:600;margin:0 0 8px}
+.tt::before{content:"Table " counter(sec) "." counter(tbl) ". ";color:var(--ink2)}
+figure{margin:22px 0 22px;clear:both;counter-increment:fig;background:#f8f8f6;border:1px solid var(--grid);padding:14px 16px 12px}
+figure h4::before{content:"Figure " counter(sec) "." counter(fig) ". ";color:var(--ink2)}
+figure h4{font-size:13px;font-weight:600;margin:0 0 6px}
+figure svg{display:block;width:100%;height:auto;overflow:visible}
+figcaption{font-size:12px;color:var(--ink2);margin-top:10px;padding-top:8px;border-top:1px solid var(--grid)}
+.legend{font-size:12px;color:var(--ink2);margin:4px 0 6px;display:flex;flex-wrap:wrap;gap:12px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.sw{width:11px;height:11px;display:inline-block}
+.sw.line{height:0;border-top:2px solid var(--bar);width:16px}
+.sw.dash{border-top-style:dashed}
+.sw.dot{border-top-style:dotted;border-top-width:3px}
+.sw.hollow{border:2px solid var(--bar);width:8px;height:8px;border-radius:50%;background:transparent}
+.sw.fill{background:var(--bar);width:10px;height:10px;border-radius:50%}
+.tw{overflow-x:auto;margin:10px 0 6px;clear:both}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:4px 8px;text-align:left;border-bottom:1px solid var(--grid);vertical-align:top}
+th{font-weight:600;border-bottom:1px solid var(--ink);white-space:nowrap}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.f{font-weight:700}
+ul{padding-left:20px;max-width:72ch}
+li{margin-bottom:4px}
+li p.lead{margin:0;max-width:none}
+li p.cont{margin:2px 0 0;text-indent:1.5em;max-width:none}
+.small{font-size:13px;color:var(--ink2)}
+a{color:var(--ink)}
+nav.toc{position:fixed;top:32px;left:16px;width:200px;font-size:12.5px;line-height:1.35;display:none;max-height:calc(100vh - 48px);overflow:auto}
+nav.toc a{display:block;color:var(--ink2);text-decoration:none;padding:3px 8px;border-left:2px solid var(--grid)}
+nav.toc a:hover{color:var(--ink);border-left-color:var(--bar2)}
+nav.toc a.on{color:var(--ink);border-left-color:var(--ink);font-weight:600}
+nav.toc .t{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding:0 8px 6px}
+@media (min-width:1100px){nav.toc{display:block}body{padding-left:236px}}
+h2{scroll-margin-top:16px}
+#tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;line-height:1.4;padding:6px 8px;max-width:280px;z-index:10;opacity:0}
+</style>
+
+<div class="wrap">
+<h1>Tompkins County assessment audit</h1>
+<div class="meta">Assessments 2021–2026 · about 36,000 properties · 3,851 sales 2021–2025 · September 2026</div>
+<p class="small" style="border:1px solid var(--rule);padding:8px 12px;max-width:none"><b>Please note:</b> this is an informal analysis of public data by a private citizen, not a professional appraisal or ratio study. It is offered as a basis for discussion and for questions to put to the Department of Assessment. It should not be relied on directly for decisions; figures should be verified by the county or an independent firm before any action is taken on them.</p>
+
+<aside class="side"><b>How to read the numbers</b><p><b>0.80</b> means the assessment was 80% of the sale price.</p><p>"Before" is the assessment when the property sold. "After" is the first assessment set once the county knew the price.</p><p>If assessments were fair, the figure would be about the same for every type of property and every part of the county.</p></aside>
+
+<p>Your tax bill is your assessment times the tax rate. The rate is what the county, towns and schools need, divided by everyone's assessments. If some properties are assessed too low, everyone else pays more. This audit checks whether that is happening in Tompkins County, using actual sale prices.</p>
+<ol class="sum">
+  <li>House assessments rose 40% from 2021 to 2024. Apartments rose 16%, commercial property 7%, vacant land 10%, farmland 1%.</li>
+  <li>A house that sold was reset to its sale price; its unsold neighbors were not. Buyers' assessments rose about 26%; similar houses nearby rose 7–10%.</li>
+  <li>Apartments and commercial property are assessed at about 0.79 and 0.63 of what they sell for; houses at 0.88.</li>
+  <li>Accuracy varies by town: 0.74 in outer Groton, 0.94 in Cayuga Heights.</li>
+  <li>The cheapest houses are assessed closest to price: under $150,000, 0.91–0.98; above it, about 0.80.</li>
+  <li>Some large properties look wrong, including a shopping center that sold for three times its assessment.</li>
+  <li>Collegetown Terrace is assessed at $85.8 million. Its owners borrowed $185 million against it.</li>
+  <li><b>Result: homeowners pay roughly $9 million a year that should be paid by owners of apartments, commercial property and vacant land</b> — the sales support anywhere from $2 million to $17 million.</li>
+</ol>
+
+<h2>1. Houses were raised every year; nothing else was</h2>
+<p>Houses were revalued every year — by a flat percentage in 2022 and 2023, house by house in 2024. Everything else was mostly left alone: in most years more than 90% of commercial, vacant and farm parcels kept exactly the same number, and apartments were touched only in 2022 and 2024. Before 2021 the county revalued towns in turn, every two to three years. In 2025 and 2026 it froze all assessments while it changes computer systems.</p>
+<figure><h4>Typical change in assessment from one year's roll to the next (the data begins with the 2021 roll)</h4><div class="legend" id="lg1"></div><div id="c1"></div></figure>
+<figure><h4>Share of properties whose assessment did not change at all</h4><div id="c1b"></div></figure>
+<figure><h4>What it meant for a typical City of Ithaca property: 2021 roll vs. 2025 roll, at the actual tax rates</h4><div class="trio" id="trio"></div>
+<figcaption>Typical = the median 2021 assessment of each type in the City (2,509 houses, 591 apartment buildings, 433 commercial properties), moved by the median change for that type from the 2021 roll to the 2025 roll. Half of houses rose 32–52%; half of apartment buildings 5–16%; 82% of commercial properties did not change at all. Tax = assessment × the combined city, county and school rate, before any exemptions: $34.83 per $1,000 on the 2021 roll (city 11.89, county 6.10, school 16.84), $32.28 on the 2025 roll (12.24, 4.90, 15.13), from the county's published rate tables. The 2026 roll is the same as 2025 for 97% of properties; its school rate is not yet published.</figcaption></figure>
+<p><b>Why it matters:</b> when only houses are revalued, houses pay a bigger share of the tax every year, whether or not their value grew faster.</p>
+
+<h2>2. Houses that sold were reset to the sale price</h2>
+<p>When a house sold, its next assessment was set to the sale price — exactly, in 41% of 2023 sales. Unsold neighbors got the general increase and stayed about 20% below market. The county's own annual reports show the same pattern every year since 2017, when they began reporting both figures: house assessments go in below sale prices and come out matching them.</p>
+<figure><h4>Why this is a problem: two identical houses, side by side</h4>
+<div class="tw" style="max-width:440px"><table class="pair"><thead><tr><th></th><th class="n">Sold</th><th class="n">Did not sell</th></tr></thead><tbody>
+<tr><td>Worth</td><td class="n">$400,000</td><td class="n">$400,000</td></tr>
+<tr><td>Assessed before</td><td class="n">$320,000</td><td class="n">$320,000</td></tr>
+<tr><td>Assessed after</td><td class="n">$400,000</td><td class="n">$352,000</td></tr>
+<tr><td>Tax bill</td><td class="n"><b>$12,600</b></td><td class="n"><b>$11,100</b></td></tr></tbody></table></div>
+<figcaption>The buyer pays about $1,500 a year more than the neighbor for the same house. Assumes the usual 80% starting point, a 10% general increase, and the City of Ithaca rate of $31.54 per $1,000.</figcaption></figure>
+<p><b>Why it is not allowed.</b> State law requires every property on a roll to be assessed at the same percentage of value (RPTL §305). Raising only the properties that sold — "welcome stranger" assessing — has been struck down by the U.S. Supreme Court as a denial of equal protection (<i>Allegheny Pittsburgh Coal v. Webster County</i>, 1989) and by New York courts as selective reassessment (<i>Krugman v. Board of Assessors</i>, 1988), and the state's guidance to assessors forbids it. A buyer assessed at 100% while comparable neighbors sit at 80% is entitled to have the assessment cut to 80% (RPTL §§522, 524).</p>
+<figure><h4>Increase in the next assessment: houses that sold vs. similar houses nearby that did not</h4><div class="legend" id="lg2c"></div><div id="c2c"></div>
+<figcaption>Same type of house, same town. 2025–26 not shown: assessments were frozen.</figcaption></figure>
+<p><b>Why it matters:</b> a buyer pays about 15–17% more tax than a neighbor with an identical house. And because the state checks the county against these same sales, the county looks more accurate than it is.</p>
+
+<h2>3. Apartments and commercial property are under-assessed</h2>
+<p>Houses are brought up to the sale price after they sell. Apartment buildings and commercial property are not: the county records the sale and leaves the assessment roughly where it was. Its annual reports say this is deliberate.</p>
+<div class="vs">
+<div><h4>What the county says</h4></div><div><h4>The answer</h4></div>
+<p class="c">It "does not look at sales ratios" for commercial property: many prices reflect leases, tax strategies or hopes of future gains, not the building's current income.</p>
+<p class="a">Partly fair. A store with a long lease is priced on the lease; a hotel or furnished student building's price includes furniture and business value, which are not taxed. Setting those aside is normal. But the county rejects commercial prices as unreasonable while setting house assessments to the sale price to the dollar. The law requires one standard for everyone.</p>
+<p class="c">Buyers of student housing pay more than the rents justify, so it values those buildings on their income instead.</p>
+<p class="a">The law does not allow that. Value is what buyers actually pay. The court-approved way to value a rental building uses the rate of return buyers actually accept. If buyers of Collegetown apartments accept a 4% return, that is the market, and applying it to the rents gives roughly the sale prices.</p>
+<p class="res">Result: after they sell, apartment buildings are assessed at 0.80 of price, commercial property at 0.85, and the large Collegetown buildings at 0.5–0.6. Houses are assessed at 0.99 — the sale price, to the dollar, in four cases out of ten.</p>
+</div>
+<figure><h4>Assessment as a share of sale price, by type of property, all 2021–25 sales</h4><div class="legend" id="lg3"></div><div id="c3"></div></figure>
+<div class="tw"><div class="tt">Assessment as a share of sale price, by type of property, all 2021–25 sales</div><table id="t3"></table></div>
+<p class="small">Assessors' standards (IAAO) say every type should sit between 0.90 and 1.10 of sale price. "Spread" is how much assessments vary within a group before the sale; lower is better. The limit is wider for commercial property and land because they are harder to value — it allows more scatter, not a lower level. Bold marks a failure. Farmland rests on 24 sales.</p>
+<figure><h4>Assessment as a share of sale price, before the sale, by year sold</h4><div class="legend" id="lg3b"></div><div id="c3b"></div>
+<figcaption>Commercial assessments rose 7% from 2021 to 2024, so they fall further behind each year: 0.95 for properties sold in 2021, 0.63 for 2025.</figcaption></figure>
+<p><b>Why it matters:</b> apartments and commercial property are about $2.5 billion of the tax base. Valuing every type at what its sales since July 2024 say it is worth, and holding every county, town and school levy where it is, about $9 million a year of tax moves off houses and onto apartments, commercial property and vacant land. The sales support anywhere from $2 million to $17 million, because only 25 commercial and 42 apartment buildings sold in those two years; and the largest complexes, which almost never sell, are not measured at all.</p>
+
+<h2>4. Accuracy differs by town and neighborhood</h2>
+<p>The current roll (frozen since 2024) tested against sales from July 2024 to May 2026, using the assessment that was already on the books when each house sold. The Village of Freeville is left out (too few sales). Cayuga Heights reached 0.94 only in the 2024 revaluation; it was at 0.73–0.75 in 2022–23. Neighborhoods range even more widely, from 0.74 to 0.96.</p>
+<figure><h4>House assessments as a share of sale price, by town (assessment before the sale)</h4><div class="legend" id="lg4"></div><div id="c4"></div></figure>
+<p><b>Why it matters:</b> county and school taxes are shared across town lines. A homeowner in Cayuga Heights (0.94) pays about 28% more county and school tax per dollar of real value than one in outer Groton (0.74). The state's equalization rate and the county's own reports put the county at 100% of market value; the sales say 0.88.</p>
+
+<h2>5. The cheapest houses are assessed closest to price</h2>
+<p>Houses that sold for under $100,000 were assessed at 0.98 of the price; $100,000–150,000 at 0.91; everything from $150,000 to $1 million at about 0.80; and houses over $1 million lower still, at 0.77 — with most of the lakefront houses among them at 0.40–0.68. Sales between relatives push the cheapest group up a little, but the pattern holds in four of five years.</p>
+<figure><h4>House assessment as a share of sale price, by sale price (assessment before the sale, all 2021–25 sales)</h4><div id="c5"></div><figcaption>Line through each bar = likely range. Only six houses sold for $2 million or more; they range from 0.47 to 1.13, so that bar means little. Among the 17 sales above $1.5 million, the lakefront houses (Taughannock Boulevard, Willow Creek, East Shore Drive, Algerine Road) were mostly assessed at 0.40–0.68 of price (two at 0.82–0.84), while the Cayuga Heights houses ranged from 0.58 to 1.13.</figcaption></figure>
+<p><b>Why it matters:</b> owners of the least expensive homes pay the highest effective tax rate in the county, and owners of the most expensive — especially lakefront — homes pay the lowest.</p>
+
+<h2>6. Properties that deserve a second look</h2>
+<div class="tw"><div class="tt">Sales of $1 million or more where the assessment stayed below 70% of the price</div><table id="t6a"></table></div>
+<div class="tw"><div class="tt">Assessments over $1 million cut by more than 25% in a single year</div><table id="t6b"></table></div>
+<p class="small">Some cuts will have good reasons — a court settlement, a demolition, a tax agreement with the county's development agency (roll section 8 means fully tax-exempt) — and each should have a written explanation on file. Also, about 100 taxable homes kept exactly the same assessment from 2021 to 2024 while their towns rose 25–40%, including a $1.6 million lakefront home.</p>
+<p><b>Fraternity and sorority houses.</b> 50 taxable houses in the City and Cayuga Heights, $45 million in all; 90% have had the same assessment since 2021. They rarely sell (three sales in ten years; 210 Thurston Ave sold for $2.5 million in 2016 and is assessed at $1.8 million). They are assessed at a median $112 per square foot; the apartment buildings in the same neighborhoods are at $203, and City apartment buildings sell at $204.</p>
+<p><b>Why it matters:</b> the South Meadow Street shopping center alone — sold for $24.25 million, assessed at $10.5 million — shifts roughly $400,000 a year onto other city and school taxpayers.</p>
+
+<h2>7. Collegetown Terrace</h2>
+<p>Five tax parcels on East State Street and Valentine Place, owned by three related companies (VVA Phase I &amp; II, III and IV — the Novarr-Mackesey group). All are fully taxable apartment buildings, built in phases from 2013 to 2017: about 770 apartments by the county's count, more than 1,250 beds by the developer's.</p>
+<div class="tw"><div class="tt">Collegetown Terrace: the five parcels and their assessments ($ millions)</div><table id="t8"></table></div>
+<figure><h4>Collegetown Terrace, 2013–2026: what was borrowed against it and what the county assessed it at ($ millions)</h4><div class="legend" id="lg8a"></div><div id="c8a"></div>
+<figcaption>Loans recorded with the County Clerk: $72M on Phases I–II (2014), $55.9M on Phase III (2015), $57M on Phase IV (2016), combined in December 2019 into one $185.2M Fannie Mae mortgage secured by these five parcels only (instruments 2019-14955, 2022-12081). The value behind the mortgage is a 2019 figure; Collegetown apartment prices rose between 2019 and 2025, so today's value is unlikely to be lower. The county assessed the complex at $61.4M in 2021 and $85.8M since 2024.</figcaption></figure>
+<aside class="side"><b>Two cautions</b><p>Furniture, the shuttle and services are not taxable real estate, so an assessment can sit somewhat below a sale price or loan — but not at half.</p><p>Cost is not value. The $190 million construction cost is background only; the mortgage and the rent carry the weight.</p></aside>
+<p>Three checks all say the assessment is low:</p>
+<ul>
+  <li><b>The mortgage.</b> Lenders lend 65–80% of appraised value, so a $185 million loan implies an appraisal of $230–285 million in 2019. Fannie Mae loans require an independent appraisal from the building's income, and net income of at least 1.25 times the loan payments.</li>
+  <li><b>What similar buildings sell for.</b> Large Collegetown apartment buildings sold in 2021–25 for $310,000–$720,000 per apartment. Collegetown Terrace is assessed at about $111,000 — less than a garden-apartment complex in Lansing.</li>
+  <li><b>The rent it earns.</b> Advertised rents run from $599 per bedroom per month (a small studio suite with shared bathroom and kitchen) to $2,259 (a one-bedroom cottage). Valued from that income as a buyer would, the property is worth roughly $115–220 million. For $85.8 million to be right, it would have to net only about $5 million a year.</li>
+</ul>
+<figure><h4>Assessment per apartment: Collegetown Terrace vs. actual sales ($ thousands)</h4><div id="c8b"></div>
+<figcaption>Student buildings with several bedrooms per apartment sell for more per apartment, so the comparison is rough. Even so, Collegetown Terrace is the lowest.</figcaption></figure>
+<figure><h4>Estimates of the property's value from each source ($ millions)</h4><div class="legend" id="lg8c"></div><div id="c8c"></div></figure>
+<p>Allowing for the cautions, the assessment is probably $50–130 million too low.</p>
+<p><b>Why it matters:</b> at the city's combined tax rate ($32.28 per $1,000 including school tax) that is $1.6–4.2 million a year paid by other city and school taxpayers. The Legislature cannot set an assessment, but it can have the five parcels valued from their income. (Owners need not share income figures unless they challenge their assessment.)</p>
+
+<h2>8. What the law requires</h2>
+<ul>
+  <li><b>One standard for all.</b> Real Property Tax Law §305 requires every property to be assessed at the same percentage of market value. There is no lower standard for commercial property. Apartments at 0.79 and commercial property at 0.63 while houses are at 0.88 does not meet it.</li>
+  <li><b>Rental buildings are valued from their rent.</b> The state's highest court: income property is valued by what an investor would pay for its income (<i>Merrick Holding</i>, 1978), and a recent normal sale is the best evidence of value (<i>A&amp;P v. Kiernan</i>, 1977). The properties in section 6 are assessed at 0.23–0.70 of prices they actually sold for; whatever method produced those figures did not treat the sale as the best evidence.</li>
+  <li><b>Only the owner can complain.</b> An assessment is presumed correct and only the owner may challenge it (<i>FMC v. Unmack</i>, 1998). No one can complain that a neighbor is assessed too <i>low</i>. So large commercial properties stay under-assessed for years, and only the Legislature is in a position to act.</li>
+  <li><b>Resetting only the houses that sold is illegal.</b> Selective reassessment of sold properties violates equal protection (<i>Allegheny Pittsburgh Coal v. Webster County</i>, U.S. Supreme Court 1989) and New York law (<i>Krugman v. Board of Assessors</i>, 1988). A homeowner raised to the sale price while comparable neighbors stay at 80% has grounds for an "unequal assessment" complaint (§§522, 524). Section 2 describes roughly 1,200 such cases.</li>
+</ul>
+
+<h2>9. What the Legislature should do</h2>
+<p><b>The freeze.</b> Assessments have been frozen since 2024 while the Department changes software, and its plan returns to full value only in 2029: commercial property valued in 2028, houses and apartments in 2029. The freeze does not pause the problem — the 2024 pattern (houses 0.88, apartments 0.79, commercial 0.63 of what they sell for) stays in place, about $9 million a year, until it is corrected. It did stop the resetting of sold houses, which will resume in 2029 unless a rule prevents it.</p>
+<p>Some of this only the Director of Assessment can do. The rest the Legislature can do itself, whether or not the Assessment Department engages. The sequence: 2026, commission the check and the valuation; 2027, pass the law; 2028, apartments and commercial property brought to the same level as houses; 2029, the full revaluation under the new rules.</p>
+<h3>To ask of the Director of Assessment</h3>
+<ul>
+  <li><b>Bring apartments and commercial property to the same percentage of market value as houses on the 2028 roll.</b> The law requires a uniform percentage, not 100%; while houses stay at 0.88, apartments and commercial property should be at 0.88 too. The Department already plans to value commercial property in 2028 — add apartments, instead of leaving them to 2029.</li>
+  <li><b>Do not resume raising only the house that sold</b> when houses are revalued in 2029. If a sale shows a neighborhood is under-assessed, raise the neighborhood; otherwise give the sold house the same increase as its neighbors.</li>
+  <li><b>Look at the places furthest below market</b> — outer Groton, Enfield, the Village of Groton and Trumansburg — and stop giving Cayuga Heights and the City the same increase as the outer towns.</li>
+  <li><b>Check how the cheapest houses are valued.</b></li>
+  <li><b>Explain or fix each property in section 6.</b> For Collegetown Terrace, state the rent, expenses and capitalization rate behind $85.8 million.</li>
+  <li><b>Publish a sales-ratio study of the roll each fall, in this form:</b> for every sale since the valuation date, the assessment that was on the roll <i>before</i> the sale, divided by the price; the median ratio, spread and number of sales for every type of property, every municipality and every assessment neighborhood; and the sales list itself, with the arm's-length code for each sale. The Department has all of this in its database. Its annual reports now give a ratio for houses countywide, two ways. The before-revaluation figure is a fair test, and by the Department's own numbers it was 0.73 for the 2023 roll and 0.81 for 2024. The after-revaluation figure (1.04, 1.02, and 0.97 in the 2025 report) compares the new roll with the same sales it was built from — a quarter of those houses are assessed at exactly their sale price — so it measures fit, not accuracy. The reports give no figures by municipality or neighborhood, and none for apartments or commercial property.</li>
+</ul>
+<h3>What the Legislature can do itself</h3>
+<ul>
+  <li><b>Require the sales-ratio study above as a condition of the Assessment Department's budget,</b> and have an outside firm verify it each year (a few thousand dollars). If the Department will not produce it, an outside firm can, from the public files, for about $15,000–40,000. Send it to the state Office of Real Property Tax Services with a request that it review its own figure for the county.</li>
+  <li><p class="lead"><b>Hold the Department to results, not promises, by local law.</b> The Department says it revalues every year; the sales show what that produced. The Legislature cannot set a property's value, but it chooses the reassessment schedule, pays for it, and can define what counts as done. Amend the county's Administrative Code, in time for the 2028 roll, so that any type of property, town or neighborhood whose ratio differs from the county's overall ratio by more than 5 points (on at least 20 sales over two years) must be revalued on the next roll, with the funding to follow. That is the test that matters: the law requires one percentage for everything, so if the county is at 0.88, every type and every town must be between 0.83 and 0.93. Whether the whole county is within 0.90–1.10 of its claimed level is the second test.</p><p class="cont">Types with too few sales — fraternities, hotels, industrial property, the large student complexes — are tested by appraisal instead: an outside appraiser values a sample every three years, and the same 5-point rule applies. Run the check each fall, before the budget; publish it with the sales list; send it to the state; and let owners cite it in grievances.</p></li>
+  <li><b>Fund an independent valuation of every apartment and commercial property now.</b> This report is the first year's check, and those two types fail it. Hire an appraisal firm to value all of them — about 2,250 parcels, $2.5 billion of assessed value — from their income at market rents, with full appraisals of the largest, starting with Collegetown Terrace and the section 6 properties. Roughly $0.5–1 million, one time, against a shift of roughly $9 million a year — of which about $1.7 million is county tax, $2.1 million town and city tax, and $5.4 million school tax. Write the contract so the Department must adopt the values or explain in writing, parcel by parcel, why not, and put the appraisals on the public record.</li>
+  <li><b>Ask the State Comptroller to audit the assessment function.</b> Requested by resolution, at no cost; the audit produces public findings and the county must file a written corrective action plan within 90 days. The Comptroller has audited dozens of assessors' offices, though nearly all on exemption administration rather than valuation, so name the scope carefully: whether commercial and apartment assessments have a written, documented basis; how sold properties are treated; and whether the Department's published statistics are supported by its records. Questions of valuation itself may be referred to the state Office of Real Property Tax Services. Six to twelve months, so a 2027 result.</li>
+</ul>
+
+<h2>10. What rebalancing would mean for the three properties in Figure 1.3</h2>
+<p>Figure 1.3 showed what the typical City of Ithaca house, apartment building and commercial property paid on the 2021 and 2025 rolls. If apartments, commercial property and vacant land were assessed at the same share of value as houses, and the county, towns and schools raised the same money, tax rates would fall — by about 5% for the county and school taxes, and 9% for the city tax, because the City's base is 45% houses and 50% apartments and commercial property, where the county's is 69% houses. For the typical property of each type, the bills would move like this:</p>
+<figure><h4>Typical City of Ithaca property: today's bill vs. the bill after rebalancing, same total tax</h4><div class="trio" id="trio2"></div>
+<figcaption>Today's bills are the 2025-roll figures from Figure 1.3. Sales since July 2024 put the typical house at 0.88 of market value, the typical apartment building at 0.79 and the typical commercial property at 0.63; rebalancing raises the latter two by 11% and 40% and lowers the county, school and city rates by 5%, 5% and 9%. Countywide about $9 million a year moves off houses — $2–17 million on the sales available — every year the roll stays balanced. Weighted by value, the apartment buildings that sold are closer to houses (0.86, on 42 sales) than the typical one is; the largest complexes, which almost never sell, are not in these figures at all, and Collegetown Terrace alone would add $1.6–4.2 million. Some of the apartment share will reach tenants through rent.</figcaption></figure>
+
+<h2>11. Data and method</h2>
+<p class="small">Assessments: <a href="https://data.ny.gov/Government-Finance/Property-Assessment-Data-from-Local-Assessment-Rol/7vem-aaz7">NYS Open Data, Property Assessment Data from Local Assessment Rolls</a>, 2021–2025, matched across years by parcel number. 2026 assessments, last sale, apartment counts and neighborhood codes: <a href="https://tcdata-tompkinscounty.opendata.arcgis.com/datasets/tompkinscounty::parcels-public/about">Tompkins County GIS Parcels Public</a> (downloaded August 2026; latest sale May 2026). Only each property's most recent sale is available, and sales are not marked as normal or not. Sales were kept if the price was at least $10,000, the property type was unchanged, nothing was built after the sale, and assessment ÷ price was between 0.25 and 4.0 (3,851 of 4,891). Sales between people with the same last name — a rough test for family transfers — were 21 of the 3,059 with both names known; removing them changes no figure. "Before" = last assessment set before the sale (12–24 months earlier); "after" = first assessment set after the county knew the price. No adjustment is made for market movement in between (roughly 2–11% a year); this affects the overall level but not comparisons between types of property or places. Commercial prices can include business value. County annual reports 2010–2025 (Assessment Department) supplied section 2's before/after series and the statements on commercial valuation. State series: NYS Open Data, Residential Assessment Ratios and Assessment Equity Statistics. Collegetown Terrace: County Clerk instruments 2019-14955 and 2022-12081, county records, developer's website, <a href="https://ithacating.com/tag/collegetown-terrace/">Ithacating</a>. Law: Real Property Tax Law and cases cited; 2025–26 freeze: <a href="https://www.ithaca.com/news/tompkins_county/tompkins-county-expected-to-pause-property-assessments-as-home-sales-decline/article_af851c7e-d429-11ef-93da-3b315124448d.html">Ithaca Times, Jan 2025</a>; <a href="https://ithacavoice.org/2026/04/county-pauses-property-reassessments-tech-grade/">Ithaca Voice, Apr 2026</a>. The full tables behind every figure are available on request.</p>
+</div>
+<div id="tip"></div>
+
+<script id="data" type="application/json">{"yoy": [{"year": 2022, "class": "2-3 family", "n": 2698, "median_pct": 9.0, "unchanged_pct": 12.4, "agg_pct": 10.4}, {"year": 2022, "class": "Agricultural", "n": 736, "median_pct": 0.0, "unchanged_pct": 97.7, "agg_pct": -1.6}, {"year": 2022, "class": "Apartments", "n": 1080, "median_pct": 4.6, "unchanged_pct": 22.8, "agg_pct": 6.7}, {"year": 2022, "class": "Commercial", "n": 1121, "median_pct": 0.0, "unchanged_pct": 96.1, "agg_pct": -0.2}, {"year": 2022, "class": "Other", "n": 2292, "median_pct": 0.0, "unchanged_pct": 64.5, "agg_pct": 0.1}, {"year": 2022, "class": "Other residential", "n": 3318, "median_pct": 5.2, "unchanged_pct": 16.1, "agg_pct": 9.5}, {"year": 2022, "class": "Single-family", "n": 18415, "median_pct": 7.8, "unchanged_pct": 11.9, "agg_pct": 8.9}, {"year": 2022, "class": "Vacant land", "n": 4997, "median_pct": 0.0, "unchanged_pct": 96.3, "agg_pct": 0.8}, {"year": 2023, "class": "2-3 family", "n": 2732, "median_pct": 10.0, "unchanged_pct": 1.4, "agg_pct": 10.1}, {"year": 2023, "class": "Agricultural", "n": 736, "median_pct": 0.0, "unchanged_pct": 96.3, "agg_pct": 0.2}, {"year": 2023, "class": "Apartments", "n": 1172, "median_pct": 0.0, "unchanged_pct": 90.6, "agg_pct": 1.3}, {"year": 2023, "class": "Commercial", "n": 1196, "median_pct": 0.0, "unchanged_pct": 94.4, "agg_pct": 2.8}, {"year": 2023, "class": "Other", "n": 2316, "median_pct": 0.0, "unchanged_pct": 62.5, "agg_pct": 2.1}, {"year": 2023, "class": "Other residential", "n": 3274, "median_pct": 9.9, "unchanged_pct": 3.9, "agg_pct": 9.1}, {"year": 2023, "class": "Single-family", "n": 18448, "median_pct": 10.0, "unchanged_pct": 3.4, "agg_pct": 9.9}, {"year": 2023, "class": "Vacant land", "n": 4970, "median_pct": 0.0, "unchanged_pct": 67.9, "agg_pct": 7.8}, {"year": 2024, "class": "2-3 family", "n": 2729, "median_pct": 13.4, "unchanged_pct": 8.0, "agg_pct": 15.2}, {"year": 2024, "class": "Agricultural", "n": 749, "median_pct": 0.0, "unchanged_pct": 94.8, "agg_pct": 2.4}, {"year": 2024, "class": "Apartments", "n": 1159, "median_pct": 0.0, "unchanged_pct": 44.0, "agg_pct": 7.2}, {"year": 2024, "class": "Commercial", "n": 1210, "median_pct": 0.0, "unchanged_pct": 83.7, "agg_pct": 4.6}, {"year": 2024, "class": "Other", "n": 2321, "median_pct": 0.0, "unchanged_pct": 53.0, "agg_pct": 14.9}, {"year": 2024, "class": "Other residential", "n": 3324, "median_pct": 10.0, "unchanged_pct": 32.5, "agg_pct": 15.8}, {"year": 2024, "class": "Single-family", "n": 18517, "median_pct": 15.1, "unchanged_pct": 10.4, "agg_pct": 17.0}, {"year": 2024, "class": "Vacant land", "n": 5148, "median_pct": 0.0, "unchanged_pct": 96.7, "agg_pct": 1.6}, {"year": 2025, "class": "2-3 family", "n": 2743, "median_pct": 0.0, "unchanged_pct": 97.2, "agg_pct": 0.1}, {"year": 2025, "class": "Agricultural", "n": 761, "median_pct": 0.0, "unchanged_pct": 97.4, "agg_pct": 0.9}, {"year": 2025, "class": "Apartments", "n": 1179, "median_pct": 0.0, "unchanged_pct": 94.3, "agg_pct": -0.2}, {"year": 2025, "class": "Commercial", "n": 1211, "median_pct": 0.0, "unchanged_pct": 97.4, "agg_pct": 0.5}, {"year": 2025, "class": "Other", "n": 2335, "median_pct": 0.0, "unchanged_pct": 65.4, "agg_pct": 0.4}, {"year": 2025, "class": "Other residential", "n": 3252, "median_pct": 0.0, "unchanged_pct": 96.5, "agg_pct": 0.5}, {"year": 2025, "class": "Single-family", "n": 17581, "median_pct": 0.0, "unchanged_pct": 96.8, "agg_pct": 0.3}, {"year": 2025, "class": "Vacant land", "n": 5216, "median_pct": 0.0, "unchanged_pct": 98.1, "agg_pct": 1.6}, {"year": 2026, "class": "2-3 family", "n": 2743, "median_pct": 0.0, "unchanged_pct": 97.9, "agg_pct": 0.1}, {"year": 2026, "class": "Agricultural", "n": 707, "median_pct": 0.0, "unchanged_pct": 97.9, "agg_pct": 0.1}, {"year": 2026, "class": "Apartments", "n": 1180, "median_pct": 0.0, "unchanged_pct": 95.0, "agg_pct": -1.8}, {"year": 2026, "class": "Commercial", "n": 817, "median_pct": 0.0, "unchanged_pct": 97.3, "agg_pct": -0.2}, {"year": 2026, "class": "Other", "n": 1768, "median_pct": 0.0, "unchanged_pct": 98.5, "agg_pct": 0.3}, {"year": 2026, "class": "Other residential", "n": 2852, "median_pct": 0.0, "unchanged_pct": 96.7, "agg_pct": 0.2}, {"year": 2026, "class": "Single-family", "n": 18561, "median_pct": 0.0, "unchanged_pct": 97.4, "agg_pct": 0.3}, {"year": 2026, "class": "Vacant land", "n": 5177, "median_pct": 0.0, "unchanged_pct": 98.8, "agg_pct": 1.9}], "trio": [{"type": "Single-family", "label": "Typical house", "av21": 240000, "av24": 337000, "tax21": 8360, "tax24": 10878}, {"type": "Apartments", "label": "Typical apartment building", "av21": 580000, "av24": 614800, "tax21": 20203, "tax24": 19843}, {"type": "Commercial", "label": "Typical commercial property", "av21": 375000, "av24": 375000, "tax21": 13062, "tax24": 12104}], "totals": [{"year": 2021, "total_av_B": 14.548}, {"year": 2022, "total_av_B": 15.333}, {"year": 2023, "total_av_B": 16.197}, {"year": 2024, "total_av_B": 18.455}, {"year": 2025, "total_av_B": 18.652}, {"year": 2026, "total_av_B": 18.255}], "ratio_class": [{"class": "2-3 family", "year": 2021, "n": 72, "pre_median": 0.781, "post_median": 0.996, "exact_pct": 38.9, "pre_COD": 14.1, "post_COD": 3.3}, {"class": "2-3 family", "year": 2022, "n": 107, "pre_median": 0.768, "post_median": 1.0, "exact_pct": 38.3, "pre_COD": 13.4, "post_COD": 2.7}, {"class": "2-3 family", "year": 2023, "n": 67, "pre_median": 0.809, "post_median": 1.0, "exact_pct": 49.3, "pre_COD": 17.0, "post_COD": 5.0}, {"class": "2-3 family", "year": 2024, "n": 92, "pre_median": 0.876, "post_median": 0.979, "exact_pct": 10.9, "pre_COD": 16.1, "post_COD": 8.2}, {"class": "2-3 family", "year": 2025, "n": 84, "pre_median": 0.918, "post_median": 0.94, "exact_pct": 4.8, "pre_COD": 15.5, "post_COD": 8.2}, {"class": "Agricultural", "year": 2021, "n": 2, "pre_median": 0.739, "post_median": 0.739, "exact_pct": 0.0, "pre_COD": null, "post_COD": null}, {"class": "Agricultural", "year": 2022, "n": 6, "pre_median": 0.693, "post_median": 0.757, "exact_pct": 33.3, "pre_COD": 24.7, "post_COD": 15.4}, {"class": "Agricultural", "year": 2023, "n": 5, "pre_median": 0.626, "post_median": 0.988, "exact_pct": 20.0, "pre_COD": 26.7, "post_COD": 10.6}, {"class": "Agricultural", "year": 2024, "n": 5, "pre_median": 0.386, "post_median": 0.406, "exact_pct": 0.0, "pre_COD": 10.8, "post_COD": 17.1}, {"class": "Agricultural", "year": 2025, "n": 6, "pre_median": 0.857, "post_median": 0.768, "exact_pct": 33.3, "pre_COD": 26.9, "post_COD": 25.9}, {"class": "Apartments", "year": 2021, "n": 26, "pre_median": 0.659, "post_median": 0.706, "exact_pct": 0.0, "pre_COD": 22.5, "post_COD": 22.3}, {"class": "Apartments", "year": 2022, "n": 27, "pre_median": 0.771, "post_median": 0.814, "exact_pct": 3.7, "pre_COD": 16.9, "post_COD": 15.5}, {"class": "Apartments", "year": 2023, "n": 31, "pre_median": 0.763, "post_median": 0.844, "exact_pct": 3.2, "pre_COD": 14.1, "post_COD": 11.9}, {"class": "Apartments", "year": 2024, "n": 37, "pre_median": 0.732, "post_median": 0.779, "exact_pct": 10.8, "pre_COD": 29.1, "post_COD": 24.6}, {"class": "Apartments", "year": 2025, "n": 22, "pre_median": 0.803, "post_median": 0.793, "exact_pct": 0.0, "pre_COD": 17.7, "post_COD": 15.1}, {"class": "Commercial", "year": 2021, "n": 15, "pre_median": 0.952, "post_median": 0.952, "exact_pct": 13.3, "pre_COD": 26.7, "post_COD": 28.0}, {"class": "Commercial", "year": 2022, "n": 25, "pre_median": 0.826, "post_median": 0.913, "exact_pct": 4.0, "pre_COD": 21.9, "post_COD": 19.1}, {"class": "Commercial", "year": 2023, "n": 19, "pre_median": 0.824, "post_median": 0.876, "exact_pct": 0.0, "pre_COD": 20.6, "post_COD": 23.5}, {"class": "Commercial", "year": 2024, "n": 18, "pre_median": 0.737, "post_median": 0.727, "exact_pct": 5.6, "pre_COD": 30.9, "post_COD": 29.5}, {"class": "Commercial", "year": 2025, "n": 15, "pre_median": 0.627, "post_median": 0.627, "exact_pct": 0.0, "pre_COD": 27.7, "post_COD": 28.5}, {"class": "Other", "year": 2021, "n": 3, "pre_median": 0.655, "post_median": 0.891, "exact_pct": 0.0, "pre_COD": 33.0, "post_COD": 24.2}, {"class": "Other", "year": 2022, "n": 5, "pre_median": 0.833, "post_median": 1.0, "exact_pct": 20.0, "pre_COD": 22.6, "post_COD": 26.0}, {"class": "Other", "year": 2023, "n": 1, "pre_median": 0.518, "post_median": 0.518, "exact_pct": 0.0, "pre_COD": null, "post_COD": null}, {"class": "Other", "year": 2024, "n": 6, "pre_median": 0.817, "post_median": 0.817, "exact_pct": 33.3, "pre_COD": 26.2, "post_COD": 26.2}, {"class": "Other", "year": 2025, "n": 4, "pre_median": 0.537, "post_median": 0.537, "exact_pct": 0.0, "pre_COD": 31.9, "post_COD": 31.9}, {"class": "Other residential", "year": 2021, "n": 28, "pre_median": 0.698, "post_median": 0.989, "exact_pct": 25.0, "pre_COD": 20.3, "post_COD": 5.6}, {"class": "Other residential", "year": 2022, "n": 58, "pre_median": 0.758, "post_median": 1.0, "exact_pct": 43.1, "pre_COD": 21.7, "post_COD": 5.5}, {"class": "Other residential", "year": 2023, "n": 58, "pre_median": 0.771, "post_median": 0.999, "exact_pct": 37.9, "pre_COD": 26.2, "post_COD": 8.0}, {"class": "Other residential", "year": 2024, "n": 44, "pre_median": 0.85, "post_median": 0.9, "exact_pct": 13.6, "pre_COD": 27.6, "post_COD": 25.3}, {"class": "Other residential", "year": 2025, "n": 62, "pre_median": 0.814, "post_median": 0.894, "exact_pct": 8.1, "pre_COD": 26.4, "post_COD": 16.0}, {"class": "Single-family", "year": 2021, "n": 374, "pre_median": 0.771, "post_median": 0.991, "exact_pct": 29.7, "pre_COD": 14.5, "post_COD": 3.9}, {"class": "Single-family", "year": 2022, "n": 631, "pre_median": 0.738, "post_median": 1.0, "exact_pct": 40.6, "pre_COD": 16.2, "post_COD": 3.1}, {"class": "Single-family", "year": 2023, "n": 525, "pre_median": 0.792, "post_median": 1.0, "exact_pct": 40.8, "pre_COD": 16.4, "post_COD": 2.9}, {"class": "Single-family", "year": 2024, "n": 514, "pre_median": 0.833, "post_median": 0.944, "exact_pct": 10.9, "pre_COD": 16.8, "post_COD": 8.8}, {"class": "Single-family", "year": 2025, "n": 623, "pre_median": 0.868, "post_median": 0.909, "exact_pct": 3.9, "pre_COD": 13.0, "post_COD": 8.7}, {"class": "Vacant land", "year": 2021, "n": 38, "pre_median": 0.757, "post_median": 0.984, "exact_pct": 34.2, "pre_COD": 25.3, "post_COD": 9.1}, {"class": "Vacant land", "year": 2022, "n": 41, "pre_median": 0.73, "post_median": 0.941, "exact_pct": 14.6, "pre_COD": 29.6, "post_COD": 16.5}, {"class": "Vacant land", "year": 2023, "n": 54, "pre_median": 0.641, "post_median": 0.916, "exact_pct": 13.0, "pre_COD": 27.1, "post_COD": 21.2}, {"class": "Vacant land", "year": 2024, "n": 42, "pre_median": 0.702, "post_median": 0.797, "exact_pct": 9.5, "pre_COD": 36.9, "post_COD": 26.1}, {"class": "Vacant land", "year": 2025, "n": 59, "pre_median": 0.682, "post_median": 0.683, "exact_pct": 5.1, "pre_COD": 32.4, "post_COD": 29.7}], "ratio_class_pooled": [{"class": "2-3 family", "n": 422, "pre_median": 0.836, "pre_ci": [0.814, 0.856], "pre_COD": 16.1, "pre_PRD": 1.025, "post_median": 0.996, "post_COD": 5.7}, {"class": "Agricultural", "n": 24, "pre_median": 0.644, "pre_ci": [0.498, 0.855], "pre_COD": 35.9, "pre_PRD": 1.043, "post_median": 0.73, "post_COD": 26.9}, {"class": "Apartments", "n": 143, "pre_median": 0.743, "pre_ci": [0.716, 0.793], "pre_COD": 21.2, "pre_PRD": 1.053, "post_median": 0.8, "post_COD": 18.5}, {"class": "Commercial", "n": 92, "pre_median": 0.826, "pre_ci": [0.755, 0.891], "pre_COD": 25.5, "pre_PRD": 1.308, "post_median": 0.854, "post_COD": 25.8}, {"class": "Other", "n": 19, "pre_median": 0.714, "pre_ci": [0.518, 0.894], "pre_COD": 30.5, "pre_PRD": 1.075, "post_median": 0.847, "post_COD": 31.8}, {"class": "Other residential", "n": 250, "pre_median": 0.774, "pre_ci": [0.746, 0.798], "pre_COD": 25.8, "pre_PRD": 1.05, "post_median": 0.986, "post_COD": 12.6}, {"class": "Single-family", "n": 2667, "pre_median": 0.803, "pre_ci": [0.797, 0.809], "pre_COD": 16.1, "pre_PRD": 1.022, "post_median": 0.986, "post_COD": 6.4}, {"class": "Vacant land", "n": 234, "pre_median": 0.707, "pre_ci": [0.656, 0.748], "pre_COD": 30.4, "pre_PRD": 1.083, "post_median": 0.899, "post_COD": 21.8}], "res_year": [{"year": 2021, "n": 474, "pre_median": 0.764, "pre_COD": 14.9, "post_median": 0.993, "post_COD": 3.9, "exact": 30.8, "within1": 51.1, "within5": 80.0}, {"year": 2022, "n": 796, "pre_median": 0.744, "pre_COD": 16.3, "post_median": 1.0, "post_COD": 3.2, "exact": 40.5, "within1": 57.7, "within5": 83.3}, {"year": 2023, "n": 650, "pre_median": 0.791, "pre_COD": 17.4, "post_median": 1.0, "post_COD": 3.5, "exact": 41.4, "within1": 60.8, "within5": 87.5}, {"year": 2024, "n": 650, "pre_median": 0.841, "pre_COD": 17.4, "post_median": 0.944, "post_COD": 9.9, "exact": 11.1, "within1": 17.2, "within5": 38.9}, {"year": 2025, "n": 769, "pre_median": 0.872, "pre_COD": 14.4, "post_median": 0.912, "post_COD": 9.3, "exact": 4.3, "within1": 6.9, "within5": 26.5}], "premium": [{"rolls": "2021\u21922022", "unsold": 7.3, "sold": 26.5, "excess": 17.1, "share_over5": 74.1}, {"rolls": "2022\u21922023", "unsold": 10.0, "sold": 25.6, "excess": 15.0, "share_over5": 73.3}, {"rolls": "2023\u21922024", "unsold": 15.2, "sold": 21.2, "excess": 2.6, "share_over5": 45.6}, {"rolls": "2024\u21922025", "unsold": 0.0, "sold": 0.0, "excess": 0.0, "share_over5": 26.9}, {"rolls": "2025\u21922026", "unsold": 0.0, "sold": 0.0, "excess": 0.0, "share_over5": 22.4}], "muni": [{"muni": "Groton (Town outside)", "n": 117, "pooled_median": 0.736, "ci": [0.7, 0.76], "COD": 25.9, "by_year": {"2021": 0.833, "2022": 0.697, "2023": 0.748, "2024": 0.691, "2025": 0.823}, "current_n": 33, "current_median": 0.735, "current_ci": [0.68, 0.87]}, {"muni": "Ulysses (outside)", "n": 160, "pooled_median": 0.773, "ci": [0.736, 0.81], "COD": 16.0, "by_year": {"2021": 0.782, "2022": 0.709, "2023": 0.713, "2024": 0.82, "2025": 0.828}, "current_n": 56, "current_median": 0.828, "current_ci": [0.802, 0.87]}, {"muni": "Caroline", "n": 120, "pooled_median": 0.776, "ci": [0.75, 0.796], "COD": 17.1, "by_year": {"2021": 0.649, "2022": 0.705, "2023": 0.767, "2024": 0.831, "2025": 0.826}, "current_n": 54, "current_median": 0.829, "current_ci": [0.79, 0.868]}, {"muni": "Danby", "n": 164, "pooled_median": 0.778, "ci": [0.756, 0.804], "COD": 16.7, "by_year": {"2021": 0.688, "2022": 0.754, "2023": 0.782, "2024": 0.857, "2025": 0.815}, "current_n": 56, "current_median": 0.825, "current_ci": [0.792, 0.89]}, {"muni": "Ithaca (Town, outside)", "n": 551, "pooled_median": 0.781, "ci": [0.772, 0.799], "COD": 14.6, "by_year": {"2021": 0.731, "2022": 0.726, "2023": 0.778, "2024": 0.822, "2025": 0.881}, "current_n": 169, "current_median": 0.885, "current_ci": [0.864, 0.905]}, {"muni": "V. Freeville", "n": 14, "pooled_median": 0.79, "ci": [0.678, 0.878], "COD": 13.9, "by_year": {"2021": 0.583, "2022": 0.717, "2023": 0.8, "2024": 0.835}, "current_n": 2, "current_median": 0.944, "current_ci": [null, null]}, {"muni": "Dryden (Town outside)", "n": 425, "pooled_median": 0.792, "ci": [0.779, 0.812], "COD": 18.4, "by_year": {"2021": 0.75, "2022": 0.75, "2023": 0.752, "2024": 0.825, "2025": 0.867}, "current_n": 142, "current_median": 0.868, "current_ci": [0.85, 0.896]}, {"muni": "V. Lansing", "n": 122, "pooled_median": 0.794, "ci": [0.748, 0.821], "COD": 16.8, "by_year": {"2021": 0.782, "2022": 0.706, "2023": 0.724, "2024": 0.813, "2025": 0.867}, "current_n": 43, "current_median": 0.898, "current_ci": [0.84, 0.968]}, {"muni": "Newfield", "n": 165, "pooled_median": 0.795, "ci": [0.763, 0.833], "COD": 20.4, "by_year": {"2021": 0.743, "2022": 0.707, "2023": 0.826, "2024": 0.879, "2025": 0.849}, "current_n": 49, "current_median": 0.867, "current_ci": [0.806, 0.938]}, {"muni": "V. Groton", "n": 89, "pooled_median": 0.8, "ci": [0.749, 0.852], "COD": 21.0, "by_year": {"2021": 0.783, "2022": 0.805, "2023": 0.778, "2024": 0.841, "2025": 0.767}, "current_n": 28, "current_median": 0.792, "current_ci": [0.713, 0.901]}, {"muni": "V. Trumansburg", "n": 80, "pooled_median": 0.801, "ci": [0.759, 0.821], "COD": 13.3, "by_year": {"2021": 0.802, "2022": 0.737, "2023": 0.817, "2024": 0.725, "2025": 0.797}, "current_n": 30, "current_median": 0.794, "current_ci": [0.761, 0.837]}, {"muni": "V. Cayuga Heights", "n": 130, "pooled_median": 0.821, "ci": [0.792, 0.841], "COD": 13.9, "by_year": {"2021": 0.817, "2022": 0.727, "2023": 0.751, "2024": 0.874, "2025": 0.955}, "current_n": 46, "current_median": 0.944, "current_ci": [0.904, 0.961]}, {"muni": "Lansing (Town outside)", "n": 372, "pooled_median": 0.832, "ci": [0.813, 0.854], "COD": 15.2, "by_year": {"2021": 0.803, "2022": 0.79, "2023": 0.808, "2024": 0.906, "2025": 0.893}, "current_n": 144, "current_median": 0.902, "current_ci": [0.879, 0.922]}, {"muni": "Enfield", "n": 109, "pooled_median": 0.833, "ci": [0.78, 0.884], "COD": 23.6, "by_year": {"2021": 0.807, "2022": 0.848, "2023": 0.918, "2024": 0.841, "2025": 0.733}, "current_n": 37, "current_median": 0.778, "current_ci": [0.7, 0.862]}, {"muni": "City of Ithaca", "n": 605, "pooled_median": 0.844, "ci": [0.83, 0.857], "COD": 15.4, "by_year": {"2021": 0.796, "2022": 0.797, "2023": 0.809, "2024": 0.874, "2025": 0.914}, "current_n": 184, "current_median": 0.921, "current_ci": [0.898, 0.942]}, {"muni": "V. Dryden", "n": 116, "pooled_median": 0.85, "ci": [0.811, 0.871], "COD": 12.9, "by_year": {"2021": 0.763, "2022": 0.811, "2023": 0.821, "2024": 0.896, "2025": 0.881}, "current_n": 42, "current_median": 0.907, "current_ci": [0.855, 0.944]}], "current_county": {"n": 1115, "median": 0.881, "COD": 14.4}, "prb": [{"year": 2021, "PRD": 1.022, "PRB": -0.049}, {"year": 2022, "PRD": 1.034, "PRB": -0.048}, {"year": 2023, "PRD": 1.056, "PRB": -0.111}, {"year": 2024, "PRD": 1.026, "PRB": -0.04}, {"year": 2025, "PRD": 1.015, "PRB": 0.003}], "under": [{"addr": "105 COURT ST W, City Of Ithaca", "pc": 411, "date": "2025-05", "price": 25450000, "av_prior": 22900000, "av_post": 17000000, "av_2026": 17000000, "ratio_2026": 0.67}, {"addr": "710-734 MEADOW ST S, City Of Ithaca", "pc": 452, "date": "2024-09", "price": 24250000, "av_prior": 8140000, "av_post": 9100000, "av_2026": 10545000, "ratio_2026": 0.43}, {"addr": "140 SENECA WAY, City Of Ithaca", "pc": 411, "date": "2021-12", "price": 14500000, "av_prior": 7600000, "av_post": 8400000, "av_2026": 9100000, "ratio_2026": 0.63}, {"addr": "2255 N TRIPHAMMER RD, Lansing", "pc": 452, "date": "2025-09", "price": 11980000, "av_prior": 7500000, "av_post": 7500000, "av_2026": 7500000, "ratio_2026": 0.63}, {"addr": "310-18 ALBANY ST S, City Of Ithaca", "pc": 642, "date": "2025-02", "price": 9000000, "av_prior": 6000000, "av_post": 6000000, "av_2026": 6000000, "ratio_2026": 0.67}, {"addr": "325-27 EDDY ST, City Of Ithaca", "pc": 411, "date": "2021-07", "price": 7755000, "av_prior": 4600000, "av_post": 4800000, "av_2026": 4800000, "ratio_2026": 0.62}, {"addr": "352-56 ELMIRA RD, City Of Ithaca", "pc": 415, "date": "2022-06", "price": 5975000, "av_prior": 3710000, "av_post": 3653000, "av_2026": 3653000, "ratio_2026": 0.61}, {"addr": "311-15 EDDY ST, City Of Ithaca", "pc": 411, "date": "2021-07", "price": 4950000, "av_prior": 2950000, "av_post": 3100000, "av_2026": 3100000, "ratio_2026": 0.63}, {"addr": "239 CHERRY ST, City Of Ithaca", "pc": 712, "date": "2023-03", "price": 4200000, "av_prior": 2175000, "av_post": 2175000, "av_2026": 2175000, "ratio_2026": 0.52}, {"addr": "401 EDDY ST, City Of Ithaca", "pc": 411, "date": "2021-07", "price": 3795000, "av_prior": 2200000, "av_post": 2300000, "av_2026": 2300000, "ratio_2026": 0.61}, {"addr": "108-10 EDDY ST, City Of Ithaca", "pc": 411, "date": "2021-09", "price": 2750000, "av_prior": 1290000, "av_post": 1360000, "av_2026": 1800000, "ratio_2026": 0.65}, {"addr": "501-07 MEADOW ST S, City Of Ithaca", "pc": 434, "date": "2022-12", "price": 2350000, "av_prior": 1500000, "av_post": 1500000, "av_2026": 550000, "ratio_2026": 0.23}, {"addr": "1251 TRUMANSBURG RD, Town Of Ithaca", "pc": 465, "date": "2025-07", "price": 2317120, "av_prior": 1400000, "av_post": 1400000, "av_2026": 1400000, "ratio_2026": 0.6}, {"addr": " GARRETT RD, Town Of Ulysses", "pc": 120, "date": "2024-08", "price": 2000000, "av_prior": 771000, "av_post": 771000, "av_2026": 771000, "ratio_2026": 0.39}, {"addr": "108 SAPSUCKER WOODS RD, Town Of Ithaca", "pc": 411, "date": "2025-11", "price": 1580000, "av_prior": 415000, "av_post": 415000, "av_2026": 415000, "ratio_2026": 0.26}, {"addr": "1175 TAUGHANNOCK BLVD, Town Of Ulysses", "pc": 210, "date": "2022-08", "price": 1575000, "av_prior": 625000, "av_post": 975000, "av_2026": 1073000, "ratio_2026": 0.68}, {"addr": "290 ALGERINE RD, Lansing", "pc": 210, "date": "2025-11", "price": 1570000, "av_prior": 757000, "av_post": 757000, "av_2026": 757000, "ratio_2026": 0.48}, {"addr": "105 WESTBOURNE LN, City Of Ithaca", "pc": 418, "date": "2021-09", "price": 1500000, "av_prior": 690000, "av_post": 690000, "av_2026": 1300000, "ratio_2026": 0.87}, {"addr": "221 EDDY ST, City Of Ithaca", "pc": 411, "date": "2022-07", "price": 1450000, "av_prior": 1010000, "av_post": 1010000, "av_2026": 1010000, "ratio_2026": 0.7}, {"addr": "108-12 STATE ST W, City Of Ithaca", "pc": 411, "date": "2021-12", "price": 1450000, "av_prior": 800000, "av_post": 800000, "av_2026": 1400000, "ratio_2026": 0.97}], "cuts": [{"key": "500700-63.-6-14", "year": 2023, "before": 26500000, "after": 17000000, "chg": -35.8, "muni": "City of Ithaca", "desc": "Apartments", "addr": "312 College", "rs": 1, "owner": "312 College Ave Assoc 2 LLC"}, {"key": "500700-61.-1-4", "year": 2025, "before": 22900000, "after": 17000000, "chg": -25.8, "muni": "City of Ithaca", "desc": "Apartments", "addr": "105 Court St W", "rs": 8, "owner": "Ex Libris, LLC"}, {"key": "500700-70.-4-5.221", "year": 2024, "before": 15000000, "after": 1, "chg": -100.0, "muni": "City of Ithaca", "desc": "Auditoriums, Exhibition and Exposition Halls", "addr": "116-118 Green St E", "rs": 8, "owner": "Asteri Conference LLC"}, {"key": "500700-67.-2-15", "year": 2022, "before": 10500000, "after": 5500000, "chg": -47.6, "muni": "City of Ithaca", "desc": "Apartments", "addr": "119-125 College", "rs": 1, "owner": "119-125 CA Associates, LLC"}, {"key": "500700-102.-1-2.1", "year": 2022, "before": 7700000, "after": 2750000, "chg": -64.3, "muni": "City of Ithaca", "desc": "Area of Neighborhood Shopping Centers", "addr": "710-734 Meadow St S", "rs": 1, "owner": "Rof Ta Ithaca LLC"}, {"key": "503089-62.-2-13.7", "year": 2022, "before": 5530000, "after": 3440000, "chg": -37.8, "muni": "Ithaca (Town, outside)", "desc": "Motel", "addr": "1020 Ellis Hollow", "rs": 1, "owner": "Cornell University"}, {"key": "503089-62.-2-1.124", "year": 2024, "before": 5220000, "after": 3245000, "chg": -37.8, "muni": "Ithaca (Town, outside)", "desc": "Apartments", "addr": "1028 Ellis Hollow", "rs": 8, "owner": "Ellis Hollow LLC"}, {"key": "503289-16.-1-10.1", "year": 2022, "before": 5000000, "after": 3517122, "chg": -29.7, "muni": "Lansing (Town outside)", "desc": "Electric Power Generation Facility - Solar", "addr": "333 Jerry Smith", "rs": 8, "owner": "Straw"}, {"key": "502600-4.-2-7.2", "year": 2022, "before": 4150000, "after": 600000, "chg": -85.5, "muni": "Enfield", "desc": "Agricultural Vacant Land (Productive)", "addr": "351 Hayts", "rs": 1, "owner": "Bergen Farms Realty LLC"}, {"key": "502489-624.89-9999-131.600/1110", "year": 2022, "before": 3992478, "after": 2917302, "chg": -26.9, "muni": "Dryden (Town outside)", "desc": "Electric Transmission", "addr": "nan Elec.trans.", "rs": 6, "owner": "N Y S Electric & Gas Corp"}, {"key": "503289-31.-1-16.5", "year": 2023, "before": 3800000, "after": 2600000, "chg": -31.6, "muni": "Lansing (Town outside)", "desc": "Apartments", "addr": "1-10 Robins", "rs": 1, "owner": "Providence Lansing Housing"}, {"key": "500700-125.-1-3.1", "year": 2022, "before": 3710000, "after": 2153000, "chg": -42.0, "muni": "City of Ithaca", "desc": "Motel", "addr": "352-56 Elmira", "rs": 1, "owner": "Seneca Valley Properties, LLC"}, {"key": "503289-16.-1-10.1", "year": 2024, "before": 3517122, "after": 2326567, "chg": -33.9, "muni": "Lansing (Town outside)", "desc": "Electric Power Generation Facility - Solar", "addr": "333 Jerry Smith", "rs": 8, "owner": "Straw"}, {"key": "502489-36.-1-4.4", "year": 2024, "before": 3500000, "after": 600000, "chg": -82.9, "muni": "Dryden (Town outside)", "desc": "Electric Power Generation Facility - Other Fuel", "addr": "nan North", "rs": 8, "owner": "TC3 Foundation, Inc"}, {"key": "500700-64.-10-7", "year": 2022, "before": 3300000, "after": 2400000, "chg": -27.3, "muni": "City of Ithaca", "desc": "Apartments", "addr": "238 Linden", "rs": 1, "owner": "Dry-Lin LLC"}], "extremes": [{"year": 2022, "n": 35174, "up50": 344, "up100": 105, "dn25": 93, "dn50": 35}, {"year": 2023, "n": 35218, "up50": 768, "up100": 211, "dn25": 78, "dn50": 20}, {"year": 2024, "n": 35275, "up50": 887, "up100": 216, "dn25": 115, "dn50": 40}, {"year": 2025, "n": 34278, "up50": 114, "up100": 55, "dn25": 70, "dn50": 22}], "burden": [{"class": "Single-family", "taxable": 5923087676, "ratio": 0.857, "mkt": 6911420859, "share_now": 53.49, "share_mkt": 51.5, "pts": 1.98}, {"class": "2-3 family", "taxable": 1031417915, "ratio": 0.902, "mkt": 1143478841, "share_now": 9.31, "share_mkt": 8.52, "pts": 0.79}, {"class": "Other residential", "taxable": 1050561689, "ratio": 0.83, "mkt": 1265736975, "share_now": 9.49, "share_mkt": 9.43, "pts": 0.05}, {"class": "Apartments", "taxable": 1671196908, "ratio": 0.764, "mkt": 2187430508, "share_now": 15.09, "share_mkt": 16.3, "pts": -1.21}, {"class": "Commercial", "taxable": 786119699, "ratio": 0.689, "mkt": 1140957473, "share_now": 7.1, "share_mkt": 8.5, "pts": -1.4}, {"class": "Vacant land", "taxable": 256576328, "ratio": 0.683, "mkt": 375660802, "share_now": 2.32, "share_mkt": 2.8, "pts": -0.48}, {"class": "Agricultural", "taxable": 115131604, "ratio": 0.406, "mkt": 115131604, "share_now": 1.04, "share_mkt": 0.86, "pts": 0.18}, {"class": "Other", "taxable": 239358261, "ratio": 0.857, "mkt": 279297854, "share_now": 2.16, "share_mkt": 2.08, "pts": 0.08}], "ct": {"av": [[2021, 61.44], [2022, 64.375], [2023, 64.375], [2024, 85.77], [2025, 85.77], [2026, 85.77]], "parcels": [["83.-2-15.1", "VVA Phase I & II, LLC", "901 E State St", 204, 11.5, 12.0, 12.0, 16.3, 16.3, 16.3], ["83.-2-15.2", "VVA Phase I & II, LLC", "901 E State St", 36, 3.36, 3.525, 3.525, 4.49, 4.49, 4.49], ["83.-2-15.3", "VVA Phase I & II, LLC", "901 E State St", 141, 11.48, 12.05, 12.05, 15.9, 15.9, 15.9], ["83.-2-15.4", "VVA Phase III, LLC", "901 E State St", 238, 20.0, 21.0, 21.0, 27.6, 27.6, 27.6], ["83.-2-15.5", "VVA Phase IV, LLC", "120 Valentine Pl", 150.6, 15.1, 15.8, 15.8, 21.48, 21.48, 21.48]], "units": 769.6, "beds": 1250, "perunit": [["Collegetown Terrace \u2014 2026 assessment", 111], ["112-14 Summit Ave (sold 2021)", 721], ["401 Eddy St (sold 2021)", 474], ["201 College Ave (sold 2021)", 472], ["105 W Court St (sold 2025)", 386], ["140 Seneca Way (sold 2021)", 382], ["325-27 Eddy St (sold 2021)", 353], ["311-15 Eddy St (sold 2021)", 309], ["Median, City apt. sales \u2265$1M (n=31)", 259], ["87 Uptown Rd, Lansing (sold 2023)", 124], ["139-57 Chestnut St (sold 2024)", 78]], "implied": [["2026 assessment", 85.8, 85.8], ["Valued from its rent (estimate)", 115, 219], ["Cost to build (2013\u201317)", 190, 190], ["Loans recorded 2014\u201316", 184.9, 184.9], ["2019 consolidated mortgage", 185.2, 185.2], ["Value implied by the mortgage", 231, 285]]}, "county_series": [[2010, null, null, 1.0, 5.0], [2011, null, null, 0.99, 4.0], [2012, null, null, 0.99, 4.0], [2014, null, null, 0.99, 4.0], [2015, null, null, 1.0, null], [2016, null, null, 0.98, null], [2017, 0.91, null, 0.99, null], [2018, 0.92, 11.4, 1.0, 4.7], [2019, 0.9, 9.2, 0.998, 2.6], [2020, 0.911, 9.9, 1.0, 3.4], [2021, 0.975, 6.0, 0.994, 5.0], [2022, 0.889, 11.0, 1.01, 3.3], [2023, 0.73, 18.0, 1.04, 7.6], [2024, 0.81, 11.4, 1.02, 4.6]], "state_rar": [[2000, 100], [2001, 96.3], [2002, 95.1], [2003, 89.1], [2004, 88.0], [2005, 89.0], [2006, 90.8], [2007, 83.3], [2008, 82.1], [2009, 100], [2010, 100], [2011, 100], [2012, 100], [2013, 100], [2014, 100], [2015, 100], [2016, 100], [2017, 100], [2018, 100], [2019, 100], [2020, 100], [2021, 100], [2022, 100], [2023, 100], [2024, 100], [2025, 100]], "bands": [{"band": "<$100k", "n": 121, "median": 0.979, "lo": 0.897, "hi": 1.119}, {"band": "$100\u2013150k", "n": 137, "median": 0.909, "lo": 0.874, "hi": 0.954}, {"band": "$150\u2013250k", "n": 680, "median": 0.817, "lo": 0.8, "hi": 0.833}, {"band": "$250\u2013350k", "n": 874, "median": 0.8, "lo": 0.787, "hi": 0.811}, {"band": "$350\u2013500k", "n": 876, "median": 0.792, "lo": 0.779, "hi": 0.804}, {"band": "$500\u2013800k", "n": 520, "median": 0.796, "lo": 0.782, "hi": 0.817}, {"band": "$800k\u20131M", "n": 84, "median": 0.805, "lo": 0.76, "hi": 0.823}, {"band": "$1\u20132M", "n": 41, "median": 0.77, "lo": 0.655, "hi": 0.811}, {"band": "$2M+", "n": 6, "median": 0.753, "lo": 0.482, "hi": 1.118}], "trio2": [{"type": "Single-family", "label": "Typical house", "now": 10878, "after": 10164}, {"type": "Apartments", "label": "Typical apartment building", "now": 19843, "after": 20600}, {"type": "Commercial", "label": "Typical commercial property", "now": 12104, "after": 15791}]}</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const tip = document.getElementById('tip');
+function moveTip(e){ const w = tip.offsetWidth, h = tip.offsetHeight; let x = e.clientX + 12, y = e.clientY + 12; if (x + w > innerWidth - 8) x = e.clientX - w - 12; if (y + h > innerHeight - 8) y = e.clientY - h - 12; tip.style.left = x + 'px'; tip.style.top = y + 'px'; }
+function hit(n, html){ n.addEventListener('mouseenter', e => { tip.innerHTML = html; tip.style.opacity = 1; moveTip(e); }); n.addEventListener('mousemove', moveTip); n.addEventListener('mouseleave', () => tip.style.opacity = 0); }
+const NS = 'http://www.w3.org/2000/svg';
+function el(tag, a, p){ const n = document.createElementNS(NS, tag); for (const k in a) n.setAttribute(k, a[k]); if (p) p.appendChild(n); return n; }
+function svg(id, w, h){ const s = el('svg', {viewBox:`0 0 ${w} ${h}`}); document.getElementById(id).appendChild(s); return s; }
+function txt(s, x, y, t, a={}){ const n = el('text', Object.assign({x, y, fill:'var(--ink2)', 'font-size':11, 'font-family':'system-ui, sans-serif'}, a), s); n.textContent = t; return n; }
+function legend(id, items){ document.getElementById(id).innerHTML = items.map(i => `<span><i class="sw ${i.k}" style="${i.s||''}"></i>${i.l}</span>`).join(''); }
+const fmt = n => n.toLocaleString('en-US');
+const money = n => '$' + (Math.abs(n) >= 1e6 ? (n/1e6).toFixed(2) + 'M' : fmt(Math.round(n)));
+const CLASSES = ['Single-family','2-3 family','Other residential','Apartments','Commercial','Vacant land','Agricultural'];
+
+/* 1: lines, pies, trio */
+const TCOL = {'Single-family':'var(--c-sf)','Apartments':'var(--c-apt)','Commercial':'var(--c-com)'};
+(function(){
+  const years=[2022,2023,2024], C1=Object.keys(TCOL), W=820,H=210,L=40,R=150,T=14,B=26;
+  const s=svg('c1',W,H), x=i=>L+i*(W-L-R)/(years.length-1), y=v=>T+(H-T-B)*(1-v/18);
+  [0,5,10,15].forEach(v=>{el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:v===0?'var(--rule)':'var(--grid)'},s);txt(s,L-6,y(v)+4,v+'%',{'text-anchor':'end','font-size':10,fill:'var(--mute)'});});
+  years.forEach((yr,i)=>txt(s,x(i),H-8,(yr-1)+'\u2192'+String(yr).slice(2),{'text-anchor':'middle','font-size':10,fill:'var(--mute)'}));
+  const ends=[];
+  C1.forEach(c=>{
+    const pts=years.map((yr,i)=>{const d=D.yoy.find(r=>r.year===yr&&r.class===c);return [x(i),y(d.median_pct),d];});
+    el('path',{d:'M'+pts.map(p=>p[0]+','+p[1]).join('L'),fill:'none',stroke:TCOL[c],'stroke-width':2.5},s);
+    pts.forEach(p=>{const cc=el('circle',{cx:p[0],cy:p[1],r:5,fill:TCOL[c],stroke:'var(--bg)','stroke-width':2},s);hit(cc,`<b>${c}, ${p[2].year-1}\u2192${p[2].year}</b><br>Typical change ${p[2].median_pct.toFixed(1)}%<br>${fmt(p[2].n)} parcels, ${p[2].unchanged_pct.toFixed(0)}% unchanged`);});
+    const l=pts[pts.length-1]; ends.push({c,y:l[1],v:l[2].median_pct});
+  });
+  ends.sort((a,b)=>a.y-b.y); let prev=-99; ends.forEach(e=>{const yy=Math.max(e.y,prev+14);prev=yy;txt(s,W-R+8,yy+4,`${e.c} ${e.v.toFixed(0)}%`,{'font-size':11,fill:TCOL[e.c],'font-weight':600});});
+  legend('lg1',C1.map(c=>({k:'',s:'background:'+TCOL[c],l:c})));
+  // pies
+  const rowH=64, W2=820, s2=svg('c1b',W2,rowH*C1.length+26), L2=130, slot=110, r0=22;
+  years.forEach((yr,j)=>txt(s2,L2+j*slot+slot/2,12,(yr-1)+'\u2192'+String(yr).slice(2),{'text-anchor':'middle','font-size':10.5,fill:'var(--mute)'}));
+  C1.forEach((c,i)=>{
+    const cy=26+i*rowH+rowH/2; txt(s2,L2-10,cy+4,c,{'text-anchor':'end','font-size':12,fill:'var(--ink)'});
+    years.forEach((yr,j)=>{
+      const d=D.yoy.find(r=>r.year===yr&&r.class===c), cx=L2+j*slot+slot/2, f=d.unchanged_pct/100;
+      const g=el('g',{},s2);
+      el('circle',{cx,cy,r:r0,fill:TCOL[c]},g);
+      if(f>0.999) el('circle',{cx,cy,r:r0,fill:'var(--bar2)'},g);
+      else if(f>0.001){const a=2*Math.PI*f, x1=cx, y1=cy-r0, x2=cx+r0*Math.sin(a), y2=cy-r0*Math.cos(a);
+        el('path',{d:`M${cx},${cy} L${x1},${y1} A${r0},${r0} 0 ${f>0.5?1:0} 1 ${x2},${y2} Z`,fill:'var(--bar2)'},g);}
+      txt(g,cx+r0+6,cy+4,d.unchanged_pct.toFixed(0)+'%',{'font-size':11,fill:'var(--ink)'});
+      hit(g,`<b>${c}, ${yr-1}\u2192${yr}</b><br>${d.unchanged_pct.toFixed(1)}% of ${fmt(d.n)} parcels kept exactly the same assessment`);
+    });
+  });
+  txt(s2,L2+3*slot+20,26+rowH/2+4,'grey = no change; colour = changed',{'font-size':11,fill:'var(--mute)'});
+  // trio tables
+  const money0=n=>'$'+Math.round(n).toLocaleString('en-US');
+  document.getElementById('trio2').innerHTML=D.trio2.map(t=>`<table><caption style="color:${TCOL[t.type]}">${t.label}</caption><thead><tr><th></th><th class="n">Now</th><th class="n">Rebalanced</th></tr></thead><tbody>
+<tr><td>Tax bill</td><td class="n">${money0(t.now)}</td><td class="n">${money0(t.after)}</td></tr>
+<tr><td>Change</td><td class="n"></td><td class="n f">${t.after-t.now>=0?'+':'\u2212'}${money0(Math.abs(t.after-t.now))} (${t.after-t.now>=0?'+':'\u2212'}${Math.abs((t.after/t.now-1)*100).toFixed(0)}%)</td></tr></tbody></table>`).join('');
+  document.getElementById('trio').innerHTML=D.trio.map(t=>`<table><caption style="color:${TCOL[t.type]}">${t.label}</caption><thead><tr><th></th><th class="n">2021</th><th class="n">2025</th></tr></thead><tbody>
+<tr><td>Assessment</td><td class="n">${money0(t.av21)}</td><td class="n">${money0(t.av24)}</td></tr>
+<tr><td>Tax bill</td><td class="n">${money0(t.tax21)}</td><td class="n">${money0(t.tax24)}</td></tr>
+<tr><td>Change</td><td class="n"></td><td class="n f">${t.tax24-t.tax21>=0?'+':'\u2212'}${money0(Math.abs(t.tax24-t.tax21))} (${t.tax24-t.tax21>=0?'+':'\u2212'}${Math.abs((t.tax24/t.tax21-1)*100).toFixed(0)}%)</td></tr></tbody></table>`).join('');
+})();
+/* 2c: buyer premium */
+(function(){
+  const W = 820, H = 190, L = 40, R = 10, T = 12, B = 26, rows = D.premium.slice(0,3);
+  const s = svg('c2c', W, H), slot = (W-L-R)/rows.length, x = i => L + i*slot, y = v => T + (H-T-B)*(1 - v/30);
+  [0,10,20,30].forEach(v => { el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:v===0?'var(--rule)':'var(--grid)'},s); txt(s, L-6, y(v)+4, v+'%', {'text-anchor':'end','font-size':10,fill:'var(--mute)'}); });
+  rows.forEach((r,i) => {
+    const bw = 24, x0 = x(i)+slot/2-bw-2, x1 = x(i)+slot/2+2;
+    const a = el('rect',{x:x0,y:y(r.unsold),width:bw,height:Math.max(1.5,y(0)-y(r.unsold)),fill:'var(--bar2)'},s);
+    const b = el('rect',{x:x1,y:y(r.sold),width:bw,height:Math.max(1.5,y(0)-y(r.sold)),fill:'var(--bar)'},s);
+    txt(s, x0+bw/2, y(r.unsold)-3, r.unsold.toFixed(0)+'%', {'text-anchor':'middle','font-size':10});
+    txt(s, x1+bw/2, y(r.sold)-3, r.sold.toFixed(0)+'%', {'text-anchor':'middle','font-size':10});
+    txt(s, x(i)+slot/2, H-8, r.rolls+' assessments', {'text-anchor':'middle','font-size':10,fill:'var(--mute)'});
+    const html = `<b>${r.rolls} assessments</b><br>Unsold: +${r.unsold.toFixed(1)}% · Sold: +${r.sold.toFixed(1)}%<br>Typical extra increase for buyers: +${r.excess.toFixed(1)} points<br>Buyers raised more than 5 points above neighbors: ${r.share_over5.toFixed(0)}%`;
+    hit(a, html); hit(b, html);
+  });
+  legend('lg2c', [{k:'',s:'background:var(--bar2)',l:'Houses that did not sell'},{k:'',s:'background:var(--bar)',l:'Houses that sold'}]);
+})();
+
+/* 3: dumbbell */
+(function(){
+  const rows = CLASSES.map(c => D.ratio_class_pooled.find(r=>r.class===c)).filter(Boolean);
+  const W = 820, rowH = 28, L = 130, R = 40, T = 20, H = T + rows.length*rowH + 26;
+  const s = svg('c3', W, H), xmin = 0.5, xmax = 1.15, x = v => L + (v-xmin)/(xmax-xmin)*(W-L-R);
+  el('rect',{x:x(0.9),y:T-6,width:x(1.1)-x(0.9),height:H-22-(T-6),fill:'#eef5ee'},s);
+  txt(s, (x(0.9)+x(1.1))/2, T-10, 'accepted range 0.90–1.10', {'text-anchor':'middle','font-size':10,fill:'var(--ink2)'});
+  [0.5,0.6,0.7,0.8,0.9,1.0,1.1].forEach(v => { el('line',{x1:x(v),x2:x(v),y1:T-6,y2:H-22,stroke:v===1?'var(--rule)':'var(--grid)'},s); txt(s, x(v), H-8, v.toFixed(1), {'text-anchor':'middle','font-size':10,fill:'var(--mute)'}); });
+  
+  rows.forEach((r,i) => {
+    const cy = T + i*rowH + rowH/2;
+    txt(s, L-10, cy+4, r.class, {'text-anchor':'end','font-size':12,fill:'var(--ink)'});
+    el('rect',{x:x(r.pre_ci[0]),y:cy-4,width:x(r.pre_ci[1])-x(r.pre_ci[0]),height:8,fill:'#dcdcdc'},s);
+    el('line',{x1:x(r.pre_median),x2:x(r.post_median),y1:cy,y2:cy,stroke:'var(--bar)','stroke-width':1.5},s);
+    const a = el('circle',{cx:x(r.pre_median),cy,r:5,fill:'var(--bg)',stroke:'var(--bar)','stroke-width':2},s);
+    const b = el('circle',{cx:x(r.post_median),cy,r:5,fill:'var(--bar)'},s);
+    txt(s, x(r.pre_median)-10, cy+4, r.pre_median.toFixed(2), {'text-anchor':'end','font-size':11});
+    txt(s, x(r.post_median)+10, cy+4, r.post_median.toFixed(2), {'font-size':11});
+    const html = `<b>${r.class}</b> (${fmt(r.n)} sales)<br>Before sale ${r.pre_median.toFixed(3)} (likely range ${r.pre_ci[0].toFixed(2)}–${r.pre_ci[1].toFixed(2)}), spread ${r.pre_COD.toFixed(1)}<br>After sale ${r.post_median.toFixed(3)}, spread ${r.post_COD.toFixed(1)}`;
+    hit(a, html); hit(b, html);
+  });
+  legend('lg3', [{k:'hollow',l:'Assessment when sold'},{k:'fill',l:'First assessment after the sale'},{k:'',s:'background:#dcdcdc',l:'Likely range of the before-sale figure'},{k:'',s:'background:#eef5ee;border:1px solid #cfe0cf',l:'Accepted range for every type (0.90–1.10)'}]);
+  document.getElementById('t3').innerHTML = '<thead><tr><th>Type of property</th><th class="n">Sales</th><th class="n">Before sale</th><th class="n">After sale</th><th class="n">Spread</th><th class="n">Accepted limit</th></tr></thead><tbody>' +
+    rows.map(r => { const lim = /Single|2-3|Other res/.test(r.class) ? 15 : /Vacant|Agri/.test(r.class) ? 25 : 20; return `<tr><td>${r.class}</td><td class="n">${fmt(r.n)}</td><td class="n${r.pre_median<0.9?' f':''}">${r.pre_median.toFixed(2)}</td><td class="n${r.post_median<0.9?' f':''}">${r.post_median.toFixed(2)}</td><td class="n${r.pre_COD>lim?' f':''}">${r.pre_COD.toFixed(0)}</td><td class="n">${lim}</td></tr>`; }).join('') + '</tbody>';
+})();
+
+/* 4: municipalities */
+(function(){
+  const rows = D.muni.filter(r=>r.current_median!=null && r.current_n>=8).sort((a,b)=>a.current_median-b.current_median);
+  const W = 820, rowH = 24, L = 170, R = 40, T = 20, H = T + rows.length*rowH + 26;
+  const s = svg('c4', W, H), xmin=0.65, xmax=1.12, x = v => L + (v-xmin)/(xmax-xmin)*(W-L-R);
+  el('rect',{x:x(0.9),y:T-6,width:x(1.1)-x(0.9),height:H-22-(T-6),fill:'#eef5ee'},s);
+  [0.7,0.8,0.9,1.0,1.1].forEach(v => { el('line',{x1:x(v),x2:x(v),y1:T-6,y2:H-22,stroke:v===1?'var(--rule)':'var(--grid)'},s); txt(s, x(v), H-8, v.toFixed(1), {'text-anchor':'middle','font-size':10,fill:'var(--mute)'}); });
+  txt(s, (x(0.9)+x(1.1))/2, T-10, 'accepted range 0.90–1.10', {'text-anchor':'middle','font-size':10,fill:'var(--ink2)'});
+  rows.forEach((r,i) => {
+    const cy = T + i*rowH + rowH/2;
+    txt(s, L-10, cy+4, r.muni, {'text-anchor':'end','font-size':12,fill:'var(--ink)'});
+    el('line',{x1:x(r.current_ci[0]),x2:x(r.current_ci[1]),y1:cy,y2:cy,stroke:'#bbb','stroke-width':3},s);
+    const b = el('circle',{cx:x(r.current_median),cy,r:5,fill:r.current_median<0.9?'var(--accent)':'var(--bar)'},s);
+    txt(s, x(r.current_ci[1])+8, cy+4, r.current_median.toFixed(2)+'  ('+r.current_n+' sales)', {'font-size':11});
+    hit(b, `<b>${r.muni}</b> — assessment on the roll at sale, Jul 2024–May 2026 sales<br>${r.current_n} sales, median ${r.current_median.toFixed(3)} (likely range ${r.current_ci[0].toFixed(2)}–${r.current_ci[1].toFixed(2)})<br>All 2021–25 sales: median ${r.pooled_median.toFixed(2)} (${fmt(r.n)} sales)`);
+  });
+  legend('lg4', [{k:'fill',l:'Assessment already on the roll when the house sold, sales since July 2024 (bar = likely range)'},{k:'',s:'background:var(--accent);border-radius:50%',l:'Below 0.90'},{k:'',s:'background:#eef5ee;border:1px solid #cfe0cf',l:'Accepted range'}]);
+})();
+/* 5: price bands */
+(function(){
+  const W = 820, H = 200, L = 40, R = 10, T = 14, B = 40, rows = D.bands;
+  const s = svg('c5', W, H), slot = (W-L-R)/rows.length, x = i => L + i*slot, y = v => T + (H-T-B)*(1-(v-0.6)/(1.1-0.6));
+  el('rect',{x:L,y:y(1.1),width:W-L-R,height:y(0.9)-y(1.1),fill:'#eef5ee'},s);
+  [0.6,0.7,0.8,0.9,1.0,1.1].forEach(v => { el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:v===1?'var(--rule)':'var(--grid)'},s); txt(s, L-6, y(v)+4, v.toFixed(1), {'text-anchor':'end','font-size':10,fill:'var(--mute)'}); });
+  txt(s, L+6, y(1.1)+11, 'accepted range 0.90–1.10', {'font-size':10,fill:'var(--ink2)'});
+  rows.forEach((r,i) => {
+    const bw = 34, xx = x(i)+slot/2-bw/2, rr = el('rect',{x:xx,y:y(r.median),width:bw,height:y(0.6)-y(r.median),fill:r.median>=0.9?'var(--c-sf)':'var(--bar2)'},s);
+    const lo=Math.max(r.lo,0.6), hi=Math.min(r.hi,1.1);
+    el('line',{x1:xx+bw/2,x2:xx+bw/2,y1:y(lo),y2:y(hi),stroke:'var(--ink)','stroke-width':1.5,'stroke-dasharray':r.n<20?'3 3':''},s);
+    txt(s, xx+bw/2+bw/2+3, y(r.median)-3, r.median.toFixed(2), {'font-size':10.5,'font-weight':600});
+    txt(s, x(i)+slot/2, H-24, r.band, {'text-anchor':'middle','font-size':10.5,fill:'var(--ink)'});
+    txt(s, x(i)+slot/2, H-10, r.n+' sales', {'text-anchor':'middle','font-size':9.5,fill:'var(--mute)'});
+    hit(rr, `<b>Sold for ${r.band}</b> (${r.n} sales)<br>Assessment before sale ÷ price: median ${r.median.toFixed(3)}<br>Likely range ${r.lo.toFixed(2)}–${r.hi.toFixed(2)}`);
+  });
+})();
+/* 6: tables */
+document.getElementById('t6a').innerHTML = '<thead><tr><th>Property</th><th class="n">Type code</th><th class="n">Sold</th><th class="n">Price</th><th class="n">Assessed before</th><th class="n">Assessed after</th><th class="n">Assessed 2026</th><th class="n">2026 ÷ price</th></tr></thead><tbody>' +
+  D.under.slice(0,12).map(r => `<tr><td>${r.addr}</td><td class="n">${r.pc}</td><td class="n">${r.date}</td><td class="n">${money(r.price)}</td><td class="n">${money(r.av_prior)}</td><td class="n">${money(r.av_post)}</td><td class="n">${money(r.av_2026)}</td><td class="n f">${r.ratio_2026.toFixed(2)}</td></tr>`).join('') + '</tbody>';
+document.getElementById('t6b').innerHTML = '<thead><tr><th>Property</th><th>Type</th><th class="n">Year</th><th class="n">Before</th><th class="n">After</th><th class="n">Change</th><th class="n">Roll section</th></tr></thead><tbody>' +
+  D.cuts.slice(0,12).map(r => `<tr><td>${r.addr.startsWith('nan ')?'Power lines':r.addr}, ${r.muni}</td><td>${r.desc}</td><td class="n">${r.year}</td><td class="n">${money(r.before)}</td><td class="n">${money(r.after)}</td><td class="n f">${r.chg.toFixed(0)}%</td><td class="n">${r.rs}</td></tr>`).join('') + '</tbody>';
+
+/* 3b: pre-sale ratio by class & year */
+(function(){
+  const cls=[['Single-family',''],['2-3 family','6 4'],['Apartments','2 3'],['Commercial',''],['Vacant land','1 3']]; const col=c=>TCOL[c]||'var(--bar2)', wid=c=>c==='Commercial'?3:2;
+  const W=820,H=210,L=40,R=150,T=12,B=26,yrs=[2021,2022,2023,2024,2025];
+  const s=svg('c3b',W,H), x=i=>L+i*(W-L-R)/(yrs.length-1), y=v=>T+(H-T-B)*(1-(v-0.55)/(1.0-0.55));
+  [0.6,0.7,0.8,0.9,1.0].forEach(v=>{el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:v===1?'var(--rule)':'var(--grid)'},s);txt(s,L-6,y(v)+4,v.toFixed(1),{'text-anchor':'end','font-size':10,fill:'var(--mute)'});});
+  yrs.forEach((yr,i)=>txt(s,x(i),H-8,yr+' sales',{'text-anchor':'middle','font-size':10,fill:'var(--mute)'}));
+  const ends=[];
+  cls.forEach(([c,dash])=>{
+    const pts=yrs.map((yr,i)=>{const d=D.ratio_class.find(r=>r.class===c&&r.year===yr);return d&&d.pre_median!=null?[x(i),y(d.pre_median),d]:null;}).filter(Boolean);
+    el('path',{d:'M'+pts.map(p=>p[0]+','+p[1]).join('L'),fill:'none',stroke:col(c),'stroke-width':wid(c),'stroke-dasharray':dash},s);
+    pts.forEach(p=>{const cc=el('circle',{cx:p[0],cy:p[1],r:c==='Commercial'?5:4,fill:col(c),stroke:'var(--bg)','stroke-width':2},s);hit(cc,`<b>${c}, ${p[2].year} sales</b> (${p[2].n} sales)<br>Before sale ${p[2].pre_median.toFixed(3)}<br>After sale ${p[2].post_median.toFixed(3)}`);});
+    const l=pts[pts.length-1]; ends.push({c,y:l[1],v:l[2].pre_median,col:col(c)});
+  });
+  ends.sort((a,b)=>a.y-b.y); let prev=-99; ends.forEach(e=>{const yy=Math.max(e.y,prev+13);prev=yy;txt(s,W-R+8,yy+4,`${e.c} ${e.v.toFixed(2)}`,{'font-size':11,fill:e.c==='Commercial'?'var(--accent)':'var(--ink2)','font-weight':e.c==='Commercial'?700:400});});
+  legend('lg3b',cls.map(([c,d])=>({k:'line'+(d===''?'':d==='6 4'?' dash':' dot'),s:'border-top-color:'+col(c)+(c==='Commercial'?';border-top-width:3px':''),l:c})));
+})();
+
+/* 8: Collegetown Terrace */
+(function(){
+  const P=D.ct.parcels, yrs=[2021,2022,2023,'2024–26'];
+  document.getElementById('t8').innerHTML='<thead><tr><th>Tax ID</th><th>Owner</th><th>Address</th><th class="n">Units</th>'+yrs.map(y=>`<th class="n">${y}</th>`).join('')+'</tr></thead><tbody>'+
+    P.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td class="n">${r[3]}</td>`+r.slice(4,8).map(v=>`<td class="n">$${v.toFixed(2)}M</td>`).join('')+'</tr>').join('')+
+    `<tr><td colspan="3"><b>Total</b></td><td class="n"><b>${D.ct.units}</b></td>`+yrs.map((y,i)=>`<td class="n"><b>$${P.reduce((a,r)=>a+r[4+i],0).toFixed(2)}M</b></td>`).join('')+'</tr></tbody>';
+  // 8a timeline
+  const W=820,H=250,L=50,R=215,T=14,B=28,s=svg('c8a',W,H),ymax=300;
+  const x=yr=>L+(yr-2013)/(2026.6-2013)*(W-L-R), y=v=>T+(H-T-B)*(1-v/ymax);
+  [0,50,100,150,200,250,300].forEach(v=>{el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:v===0?'var(--rule)':'var(--grid)'},s);txt(s,L-6,y(v)+4,'$'+v+'M',{'text-anchor':'end','font-size':10,fill:'var(--mute)'});});
+  [2013,2015,2017,2019,2021,2023,2025].forEach(yr=>txt(s,x(yr),H-10,yr,{'text-anchor':'middle','font-size':10,fill:'var(--mute)'}));
+  // cost to build 2013-17 (grey, background)
+  el('line',{x1:x(2013),x2:x(2017),y1:y(190),y2:y(190),stroke:'#999','stroke-width':1.5,'stroke-dasharray':'2 3'},s);
+  txt(s,x(2013),y(190)-6,'Cost to build, 2013–17: $190M',{'font-size':10.5,fill:'var(--mute)'});
+  // loans recorded: cumulative step 2014 72, 2015 127.9, 2016 184.9; consolidated 2019 185.2, outstanding since
+  const steps=[[2014,72],[2015,127.9],[2016,184.9],[2019,185.2]];
+  let path='M'+x(2013.5)+','+y(0); let prev=0;
+  steps.forEach(([yr,v])=>{path+=' L'+x(yr)+','+y(prev)+' L'+x(yr)+','+y(v); prev=v;});
+  el('path',{d:path,fill:'none',stroke:'var(--accent)','stroke-width':2},s);
+  el('line',{x1:x(2019),x2:x(2026.5),y1:y(185.2),y2:y(185.2),stroke:'var(--accent)','stroke-width':2.5},s);
+  steps.forEach(([yr,v])=>{const c=el('circle',{cx:x(yr),cy:y(v),r:4,fill:'var(--accent)',stroke:'var(--bg)','stroke-width':1.5},s);hit(c,`<b>${yr}</b><br>Loans recorded: $${v}M`+(yr===2019?' (consolidated Fannie Mae mortgage)':''));});
+  txt(s,W-R+8,y(185.2)+4,'Mortgage since 2019: $185.2M',{'font-size':10.5,fill:'var(--accent)','font-weight':600});
+  // value implied by the mortgage, 2019 appraisal
+  el('rect',{x:x(2018.7),y:y(285),width:x(2019.3)-x(2018.7),height:y(231)-y(285),fill:'var(--accent)',opacity:0.85},s);
+  el('rect',{x:x(2019.3),y:y(285),width:x(2026.5)-x(2019.3),height:y(231)-y(285),fill:'#f6dad7'},s);
+  txt(s,W-R+8,y(258)+4,'Value implied by the 2019 mortgage:',{'font-size':10.5,fill:'var(--accent)','font-weight':600});
+  txt(s,W-R+8,y(258)+17,'$231–285M (lenders lend 65–80%)',{'font-size':10.5,fill:'var(--accent)'});
+  // assessment 2021-26
+  const av=D.ct.av;
+  el('path',{d:'M'+av.map(([yr,v])=>x(yr)+','+y(v)).join(' L'),fill:'none',stroke:'var(--c-apt)','stroke-width':2.5},s);
+  av.forEach(([yr,v])=>{const c=el('circle',{cx:x(yr),cy:y(v),r:5,fill:'var(--c-apt)',stroke:'var(--bg)','stroke-width':1.5},s);hit(c,`<b>${yr} assessment</b><br>$${v.toFixed(1)} million`);});
+  txt(s,x(2021),y(61.44)+16,'$61.4M',{'text-anchor':'middle','font-size':10.5,fill:'var(--c-apt)','font-weight':600});
+  txt(s,x(2024.2),y(85.77)-9,'$85.8M',{'text-anchor':'middle','font-size':10.5,fill:'var(--c-apt)','font-weight':600});
+  txt(s,W-R+8,y(85.77)+4,'County assessment',{'font-size':10.5,fill:'var(--c-apt)','font-weight':600});
+  legend('lg8a',[{k:'',s:'background:var(--c-apt)',l:'County assessment'},{k:'line',s:'border-top-color:var(--accent);border-top-width:3px',l:'Loans recorded, then the consolidated mortgage'},{k:'',s:'background:#f6dad7;border:1px solid #e8b8b3',l:'Value implied by the 2019 mortgage'},{k:'line dot',s:'border-top-color:#999',l:'Cost to build (background only)'}]);
+  // 8b per-unit horizontal bars
+  const rows=D.ct.perunit, W2=820,rowH=22,L2=270,R2=60,T2=8,H2=T2+rows.length*rowH+24,s2=svg('c8b',W2,H2),xmax=760,xx=v=>L2+v/xmax*(W2-L2-R2);
+  [0,200,400,600].forEach(v=>{el('line',{x1:xx(v),x2:xx(v),y1:T2,y2:H2-20,stroke:v===0?'var(--rule)':'var(--grid)'},s2);txt(s2,xx(v),H2-6,'$'+v+'k',{'text-anchor':'middle','font-size':10,fill:'var(--mute)'});});
+  rows.forEach(([l,v],i)=>{const cy=T2+i*rowH+rowH/2;txt(s2,L2-8,cy+4,l,{'text-anchor':'end','font-size':11.5,fill:'var(--ink)','font-weight':i===0?700:400});const r=el('rect',{x:xx(0),y:cy-7,width:xx(v)-xx(0),height:14,fill:i===0?'var(--bar)':'var(--bar2)'},s2);txt(s2,xx(v)+5,cy+4,'$'+v+'k',{'font-size':11});hit(r,`<b>${l}</b><br>$${v},000 per unit`);});
+  // 8c implied value ranges
+  legend('lg8c',[{k:'',s:'width:9px;height:9px;background:var(--bar2);transform:rotate(45deg)',l:'Single figure'},{k:'',s:'width:24px;height:3px;background:var(--bar2)',l:'Range of estimates'}]);
+  const iv=D.ct.implied, W3=820,rowH3=26,L3=250,R3=70,T3=8,H3=T3+iv.length*rowH3+24,s3=svg('c8c',W3,H3),xm=300,x3=v=>L3+v/xm*(W3-L3-R3);
+  [0,50,100,150,200,250,300].forEach(v=>{el('line',{x1:x3(v),x2:x3(v),y1:T3,y2:H3-20,stroke:v===0?'var(--rule)':'var(--grid)'},s3);txt(s3,x3(v),H3-6,'$'+v+'M',{'text-anchor':'middle','font-size':10,fill:'var(--mute)'});});
+  const dia=(cx,cy,fill)=>el('path',{d:`M${cx},${cy-7} L${cx+7},${cy} L${cx},${cy+7} L${cx-7},${cy} Z`,fill,stroke:'var(--bg)','stroke-width':1.5},s3);
+  iv.forEach(([l,a,b],i)=>{const cy=T3+i*rowH3+rowH3/2, col=i===0?'var(--bar)':'var(--bar2)';
+    txt(s3,L3-8,cy+4,l,{'text-anchor':'end','font-size':11.5,fill:'var(--ink)','font-weight':i===0?700:400});
+    el('line',{x1:x3(0),x2:x3(xm),y1:cy,y2:cy,stroke:'var(--grid)'},s3);
+    if(a===b){const d=dia(x3(a),cy,col);txt(s3,x3(a)+12,cy+4,'$'+a.toFixed(1)+'M',{'font-size':11});hit(d,`<b>${l}</b><br>$${a}M`);}
+    else{const ln=el('line',{x1:x3(a),x2:x3(b),y1:cy,y2:cy,stroke:col,'stroke-width':3},s3);dia(x3(a),cy,col);dia(x3(b),cy,col);txt(s3,x3(b)+12,cy+4,`$${a}–${b}M`,{'font-size':11});hit(ln,`<b>${l}</b><br>$${a}M – $${b}M`);}
+  });
+})();
+
+
+/* table of contents */
+(function(){
+  const hs=[...document.querySelectorAll('.wrap h2')]; if(!hs.length) return;
+  const nav=document.createElement('nav'); nav.className='toc'; nav.innerHTML='<div class="t">Contents</div><a href="#top">Summary</a>'; document.querySelector('.wrap h1').id='top';
+  hs.forEach((h2,i)=>{ const id='s'+(i+1); h2.id=id; const a=document.createElement('a'); a.href='#'+id; a.textContent=h2.textContent; nav.appendChild(a); });
+  document.body.appendChild(nav);
+  const links=[...nav.querySelectorAll('a')];
+  const setOn=()=>{ let cur=0; hs.forEach((h2,i)=>{ if(h2.getBoundingClientRect().top<=80) cur=i+1; }); links.forEach((a,i)=>a.classList.toggle('on',i===cur)); };
+  addEventListener('scroll',setOn,{passive:true}); setOn();
+})();
+</script>
+
+</body>
+</html>
